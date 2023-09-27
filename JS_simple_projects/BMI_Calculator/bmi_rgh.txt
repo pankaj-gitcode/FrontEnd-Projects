@@ -1,0 +1,108 @@
+1. button click(addeventListener) > btn-function run
+2. btn-function= show height, weight & BMIValue value from input box in innerHTML
+	inside btn-function:
+		1. innerHTML = shows the updated height,weight & BMI result
+		2. bmiCalculator function that takes heightvalue & weightValue
+		3. since updated & current inputted values we need so we need take height & weight values here, which'll be given as argument to 
+		   bmiCalculator function
+3. bmiCalculator function needs :
+	i. heightValue & weightValue
+	ii. return bmiResult of updated height & weight
+4. we need following elements for above tasks:
+	1. height & weight units
+	2. height & weight input or say whole element so that the current values could be taken inside the btn-function
+	3. div box where result will be updates
+
+
+
+*********************************************************************************************************
+cm:   kg:
+
+bmi= cm kg
+
+if choosen metric => cm & kg
+else imperial => inch & pound
+
+
+
+a box with options like cm/m and when we dropdown and select like say cm and then given value 
+then that value will be printed on console for that unit
+
+
+function bmiCal(height, weight){}
+
+
+if (selected height:cm and weight: kg){
+
+	bmi = weight(kg)/pow(height,2)(cm2)
+}
+
+if (selected height: inch & weight: lb){
+	bmi = weight(lb)/height(inch)
+}
+
+bmiCal(ht, wt)
+
+ht = document.getElementById("height_id").textContext
+
+first take inputs from input box of height & weight
+then create function
+*********************************************************************************************************
+
+//get all the values height & weight units
+let heightUnit = document.getElementById("height-unit").value;
+let weightUnit = document.getElementById("weight-unit").value;
+
+//get the Height & weight inputs
+let heightInput = document.getElementById("height");
+let weightInput = document.getElementById("weight");
+
+
+//get BMI info welcome elements
+let bmiInfo = document.getElementById("info");
+let bmiResult = document.getElementById("bmi-result");
+
+//create an empty variable for bmi
+// let totalBMI = "";
+
+//create a function that calculate BMI
+let bmiCalculator = (height, weight)=>{
+    //check 1st if we get Invalid number Not As Number NaN
+    if (isNaN(height) || isNaN(weight)){
+        return "Invalid input";
+    }
+
+    let bmi = weight / Math.pow(height, 2);
+    return  bmi.toFixed(2);
+    
+}
+
+// create a function that'll take the input from user of height & weigth-
+//  and run the bmi calculator function and update all values
+function updateBMIInfo(){
+    //declaring the values here, when click will happen then the 
+    //below BMICalculator function will run, so that it got updated input
+    //from box
+    let heightValue = parseFloat(heightInput.value);
+    let weightValue = parseFloat(weightInput.value);
+
+    let totalBMI= bmiCalculator(heightValue, weightValue);
+    //update the values
+    bmiInfo.innerHTML = `
+        <h2>Your BMI:</h2>
+        <p>Height ${heightUnit}: ${heightValue}</p>
+        <p>Weight ${weightUnit}: ${weightValue}</p>
+        <p>BMI: ${totalBMI}</p>
+        <p id="bmi-result" style="cursor:pointer;display:inline-block">BMI</p> result here
+                    </p>
+    `;
+}
+
+
+
+//add click event on BMI result
+bmiResult.addEventListener('click', (e)=>{
+    updateBMIInfo();
+})
+
+

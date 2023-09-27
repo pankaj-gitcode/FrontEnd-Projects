@@ -30,24 +30,39 @@
                 </div>
                 <div id="radio-btns" class="bmi-elements">
                     <input type="radio" id="metric"><label for="metric" class="radio-id">Metric</label>
-                    <input type="radio" ><label for="Imperial" class="radio-id">Imperial</label>
+                    <input type="radio" ><label for="Imperial" class="radio-id">Imperial</label>    
                 </div>
                 <div id="measurements" class="bmi-elements">
                     <div id="ht">
-                        <label for="height">Height</label><br>
-                        <input type="text" id="height" class="ht" placeholder="0   cm" name="height">
+                        <label for="height">
+                            Height
+                                <select id="height-unit">
+                                    <option value="cm">CM</option>
+                                    <option value="m">Meter</option>
+                                </select>
+                        </label>
+                        <br>
+                        <input type="number" step="0.1" id="height" class="ht" placeholder="0" name="height">
                     </div>
                     <div id="wt">
-                        <label for="weight">Weight</label><br>
-                        <input type="text" id="weight" placeholder="0   Kg" name="weight">
+                        <label for="weight">
+                            Weight
+                                <select id="weight-unit">
+                                    <option value="kg">KG</option>
+                                    <option value="lb">lb</option>
+                                </select>
+                        </label>
+                        <br>
+                        <input type="number" step="0.1" id="weight" placeholder="0" name="weight">
                     </div>
+                    <div id="btn"><button id="bmi-btn">Get BMI</button></div>
                 </div>
+
 
                 <div id="info" class="bmi-elements">
                     <h2>Welcome!</h2>
-                    <p>Enter your height and weight and you'll see your
-                        BMI result here
-                    </p>
+                    <p>Enter your height and weight and you'll see your BMI result here</p> 
+                    
                 </div>
 
             </div>
@@ -56,6 +71,7 @@
 
 
     </div>
+    <script src="script.js"></script>
 
 </body>
 </html>
