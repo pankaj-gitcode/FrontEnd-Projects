@@ -34,10 +34,9 @@ html,body{
 
     position: absolute;
     /*spacing from #bmi-container div, it's parent div*/
-    top: 20vh;
+    top: 10vh;
     /*spacing from left & right*/
     margin: 0 10%;
-
 
 }
 /*<h1> title styling*/
