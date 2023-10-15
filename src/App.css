@@ -1,0 +1,223 @@
+/*fonts from google*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width:100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+#main{
+  min-width: 100vw;
+  min-height: 100vh;
+  /*display-flex for container div at center to align contents accordingly*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* **********continer********** */
+#container{
+  background-color: #fff;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content:space-between;
+
+  overflow:hidden;
+  text-overflow:ellipsis;
+  /*increae the dimension of container*/
+  width: 80vw;
+  min-height:80vh;
+}
+/*Left & right box*/
+#box-left{
+  flex-basis:50%;
+  /* background-color: green; */
+}
+#box-right{
+  flex-basis:50%;
+  /* background-color: orange; */
+}
+/* ....heading.... */
+#heading{
+  margin:20px;
+  font-size: 4rem;
+  /* font-size:10rem; */
+  text-align: center;
+}
+/*----PARAGRAPHS------*/
+.para{
+  margin:0 12% 0;
+  font-size: 16px;
+  /* font-weight:bold; */
+  padding: 12px 0;
+}
+#title{
+  margin-bottom: 2%;
+}
+/*------ICONS------*/
+.icon{
+  color: hsl(4,100%,67%);
+  margin-right: 10px;
+  /* background-color: red; */
+}
+/*----EMAIL section------*/
+#email{
+  font-size:12px;
+  /*since padding isn't working so display inline-block hs been taken*/
+  display:inline-block;
+  padding-top:12px;
+  margin-left:12%;
+  font-weight:bold;
+}
+#mail{
+  /* padding: 12px 40% 12px 2px; */
+  padding:4% 38% 4% 1%;
+ 
+  margin:10px 0 12px 12%;
+  border-radius: 8px;
+  border:1px solid black;
+  
+  overflow:hidden;
+}
+/* -------BUTTON section----- */
+#button{
+  margin: 10px 0 12px 12%;
+}
+#btn{
+  width: 28vw;
+  height:8vh;
+  color: #fff;
+  cursor:pointer;
+  
+  border-radius: 8px;
+  border:none;
+
+  /* background: linear-gradient(to left, rgba(238, 4, 4, 0.1), hsl(4, 100%, 67%)); */
+  background: linear-gradient(to left, rgba(247, 81, 39, 0.5), hsl(4,100%,67%));
+  box-shadow:2px 2px 6px 5px rgba(255,98,87,0.3);
+}
+/*-------Message Para-------*/
+#message{
+  color: green;
+  font-size:12px;
+  text-align: center;
+}
+/* ***********box-right*********** */
+#box-right{
+  background-image: url("./component/Desktop_img.JPG");
+  background-repeat: no-repeat;
+  background-size:co;
+  background-position-x:center;
+  background-position-y:-2vw;
+}
+
+        /* ******************************
+                Media Query
+        ****************************** */
+
+@media screen and (max-width:900px){
+  #container{
+    width: 100vw;
+    height:162vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:  center;
+
+    position:relative;
+
+  }
+  #box-left{
+    min-width:100vw;
+    /* min-height:auto; */
+    background-color: orange;
+    position:absolute; 
+    top:70vh;
+    
+
+  } 
+  #box-right{
+    /* background-color: green; */
+    background-size:cover;
+    position:absolute; 
+    left:0;
+    top:0;
+    width:100vw;
+    height:70vh;
+  }
+  /* ............BUTTON Section...... */
+  #btn{
+    width:84vw;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************************************************************************** */
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
