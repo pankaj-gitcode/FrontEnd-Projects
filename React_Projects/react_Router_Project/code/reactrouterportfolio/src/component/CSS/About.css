@@ -3,7 +3,7 @@
     margin: 80px 0 80px 8%;
 
     display:grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(2, 560px);
     /* grid-gap: 2px; */
     /* background-color: orange; */
 
