@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag } from 'react-icons/ai'
-import { BsFillCartFill } from 'react-icons/bs'
+import { BsFillCartFill, BsPerson } from 'react-icons/bs'
+import { TbTruckReturn} from 'react-icons/tb'
+import { FaUserFriends, FaGoogleWallet} from 'react-icons/fa'
+import { MdHelp, MdOutlineFavorite} from 'react-icons/md'
 
 export default function TopNav(){
     const [sideNav, setSideNav] = useState(false) 
@@ -14,7 +17,7 @@ export default function TopNav(){
                 <div>
                     <AiOutlineMenu size={25} onClick={()=>setSideNav(!sideNav)} className='cursor-pointer'/>
                 </div>
-                <h1 className='text-[20px] sm:text-lg lg:text-xl px-2 lg:text-orange-700 text-[#000] font-medium'>Apna
+                <h1 className='text-[20px] sm:text-lg lg:text-xl px-2 lg:text-orange-700 text-[#000] font-medium'>Apna 
                     <span className='text-orange-700 lg:text-[#000]'>
                         Rasoi
                     </span>
@@ -28,7 +31,7 @@ export default function TopNav(){
                 {/* ----------------- SEARCH | INPUT BOX ------------- */}
             <div className='flex items-center bg-gray-300 rounded-full sm:w-[400px] w-[500px] p-1 '>
                 <AiOutlineSearch size={25}/>
-                <input type="text" className='bg-transparent focus:outline-none w-full px-2'/>
+                <input type="text" className='bg-transparent focus:outline-none w-full px-2' placeholder='Search your meal'/>
             </div>
 
                 {/* ---------------------- CART ---------------- */}
@@ -38,12 +41,56 @@ export default function TopNav(){
                 </button>
             </div>
 
-                {/* ------------------------ SIDE NAV-BAR ------------- */}
+                {/* --------------------------------- SIDE NAV-BAR ---------------------- */}
+
+                {/* click on humberger: transparent black screen appear*/}
                 {
                     sideNav? (
-                        <div className='bg-black/60 fixed left-0 top-0 z-10 w-full h-screen'></div>
+                        <div className='bg-black/60 fixed top-0 left-0 h-screen w-full z-10' onClick={()=>setSideNav(!sideNav)}></div>
                     ) : null
                 }
+
+                {/* click on huberger menu: side Nav bar appears with close icon  */}
+                <div
+                    className={sideNav? 'fixed bg-white/100 top-0 left-0 h-screen w-[300px] z-10 duration-500'
+                                    : 'fixed top-0 left-[-100%] z-10 h-screen w-full duration-500'}>
+                    <AiOutlineClose size={15} className='absolute right-4 top-4 cursor-pointer' onClick={()=>setSideNav(!sideNav)}/>
+
+                    <h2 className='p-4 font-semibold text-xl'>Apna <span className='text-orange-700 font-bold'>Rasoi</span></h2>
+                        {/* ---------- SERVICES | PROFILE ------ */}
+                        
+                    <nav>
+                        <ul className='flex flex-col gap-2 text-gray-900 p-4'>
+                            <li className='flex items-center py-2 px-2 gap-2 font-semibold text-xl hover:bg-gray-400 w-fit rounded-[9px] cursor-pointer'>
+                            <BsPerson size={20} className='rounded-full bg-black text-[#fff]'/>
+                            My Account
+                            </li>
+
+                            <li className='flex items-center py-2 px-2 gap-2 font-semibold text-xl hover:bg-gray-400 w-fit rounded-[9px] cursor-pointer'>
+                            <FaUserFriends size={20} className='rounded-full bg-black text-[#fff]'/>
+                            Delivery
+                            </li>
+
+                            <li className='flex items-center py-2 px-2 gap-2 font-semibold text-xl hover:bg-gray-400 w-fit rounded-[9px] cursor-pointer'>
+                            <MdOutlineFavorite size={20} className='rounded-full bg-black text-[#fff]'/>
+                            My Favourite
+                            </li>
+
+                            <li className='flex items-center py-2 px-2 gap-2 font-semibold text-xl hover:bg-gray-400 w-fit rounded-[9px] cursor-pointer'>
+                            <FaGoogleWallet size={20} className='rounded-full bg-black text-[#fff]'/>
+                            My Wallet
+                            </li>
+
+                            <li className='flex items-center py-2 px-2 gap-2 font-semibold text-xl hover:bg-gray-400 w-fit rounded-[9px] cursor-pointer'>
+                            <MdHelp size={20} className='rounded-full bg-black text-[#fff]'/>
+                            Help
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+                
        </div>
 
 
