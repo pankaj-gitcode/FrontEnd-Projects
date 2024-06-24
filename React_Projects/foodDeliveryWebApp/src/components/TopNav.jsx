@@ -4,6 +4,7 @@ import { BsFillCartFill, BsPerson } from 'react-icons/bs'
 import { TbTruckReturn} from 'react-icons/tb'
 import { FaUserFriends, FaGoogleWallet} from 'react-icons/fa'
 import { MdHelp, MdOutlineFavorite} from 'react-icons/md'
+import Features from './Features'
 
 export default function TopNav(){
     const [sideNav, setSideNav] = useState(false) 
@@ -11,14 +12,15 @@ export default function TopNav(){
 
     return(<>
        {/* ------------------------------------- NAVBAR DIV ---------------------------------- */}
-       <div className='flex items-center justify-between w-[100vw] fixed py-4'>
-            {/* ------------- MENU | BRAND-Name | TOGGLER --------- */}
+       <div className='flex items-center justify-between w-[100vw] sticky py-4 mb-10'>
+
+                {/* ------------- MENU | BRAND-Name | TOGGLER --------- */}
             <div className='flex items-center justify-center px-2'>
                 <div>
                     <AiOutlineMenu size={25} onClick={()=>setSideNav(!sideNav)} className='cursor-pointer'/>
                 </div>
-                <h1 className='text-[20px] sm:text-lg lg:text-xl px-2 lg:text-orange-700 text-[#000] font-medium'>Apna 
-                    <span className='text-orange-700 lg:text-[#000]'>
+                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl px-2 lg:text-orange-700 text-[#000] font-medium'>Apna 
+                    <span className='text-orange-700 lg:text-[#000] font-bold'>
                         Rasoi
                     </span>
                 </h1>
@@ -67,7 +69,7 @@ export default function TopNav(){
                             </li>
 
                             <li className='flex items-center py-2 px-2 gap-2 font-semibold text-xl hover:bg-gray-400 w-fit rounded-[9px] cursor-pointer'>
-                            <FaUserFriends size={20} className='rounded-full bg-black text-[#fff]'/>
+                            <TbTruckReturn size={20} className='rounded-full bg-black text-[#fff]'/>
                             Delivery
                             </li>
 
@@ -84,6 +86,7 @@ export default function TopNav(){
                             <li className='flex items-center py-2 px-2 gap-2 font-semibold text-xl hover:bg-gray-400 w-fit rounded-[9px] cursor-pointer'>
                             <MdHelp size={20} className='rounded-full bg-black text-[#fff]'/>
                             Help
+                            
                             </li>
 
                         </ul>
@@ -92,6 +95,7 @@ export default function TopNav(){
                 </div>
                 
        </div>
+       
 
 
 
