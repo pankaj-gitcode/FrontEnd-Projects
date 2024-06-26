@@ -19,8 +19,8 @@ export default function TopNav(){
                 <div>
                     <AiOutlineMenu size={25} onClick={()=>setSideNav(!sideNav)} className='cursor-pointer'/>
                 </div>
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl px-2 lg:text-orange-700 text-[#000] font-medium'>Apna 
-                    <span className='text-orange-700 lg:text-[#000] font-bold'>
+                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl px-2 lg:text-orange-700 text-[#000] font-medium animate-fire'>Apna 
+                    <span className='text-orange-700 lg:text-[#000] font-bold '>
                         Rasoi
                     </span>
                 </h1>

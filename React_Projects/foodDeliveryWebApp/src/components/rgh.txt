@@ -1,0 +1,52 @@
+
+1. Categories.jsx
+2. Delivery.jsx
+3. Features.jsx
+4. Footer.jsx
+5. Meal.jsx
+6. NewsLetter.jsx
+7. TopNav.jsx
+8. TopPicks.jsx
+
+# Installed 1 react feature [post installation visible in package.Json file]:
+    npm i react-icons
+    import {AiOutlineMenue, AiOutlineSearch, AiOutlineClose, AiFillTag} frmo 'react-icons/ai'
+    import {BsChevronCompactLeft, BsChevronCompactRight} from 'react-icons/bs'
+
+    Ex: <AiOutlineMenue size={25} /> ===> huberger menue
+
+
+
+{
+                    sideNav? (
+                        <div className='bg-black/60 fixed left-0 top-0 z-10 w-full h-screen'></div>
+                    ) : null
+                }
+
+                <div className={
+                    sideNav?  'fixed top-0 left-0 w-[300px] bg-red-500 duration-300 h-screen z-10' 
+                            : 'fixed top-0 left-[-100%] w-[300px] duration-300 h-screen z-10'
+                }>
+                    <AiOutlineClose size={25} onClick={()=>setSideNav(!sideNav)} className='cursor-pointer absolute right-4 top-4'/>
+                </div>
+
+https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672076/NetflixApp/burger_emxbtv.jpg
+https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672452/NetflixApp/pizza_osjb4f.jpg
+https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672612/NetflixApp/ric_a4ewxo.jpg
+
+1. Image slides serially one by one with some duration
+2. left & right button brings the image as per the Index from above
+
+
+
+
+1. Navbar
+2. Landing Page
+3. Marquee
+4. About section
+5. Playful (eye) animation
+6. Cards
+7. Another Cards
+8. ready to start section
+9. Footer
+
