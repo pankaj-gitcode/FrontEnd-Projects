@@ -12,8 +12,8 @@ export default function TopNav(){
 
     return(<>
        {/* ------------------------------------- NAVBAR DIV ---------------------------------- */}
-       <div className='flex items-center justify-between w-[100vw] sticky py-4 mb-10'>
-
+       <div className='flex items-center justify-between w-[100vw] sticky py-4 '>
+       
                 {/* ------------- MENU | BRAND-Name | TOGGLER --------- */}
             <div className='flex items-center justify-center px-2'>
                 <div>
@@ -42,13 +42,14 @@ export default function TopNav(){
                     <BsFillCartFill size={20}/> <span className='hidden lg:block'>Cart</span>
                 </button>
             </div>
+            
 
                 {/* --------------------------------- SIDE NAV-BAR ---------------------- */}
 
                 {/* click on humberger: transparent black screen appear*/}
                 {
                     sideNav? (
-                        <div className='bg-black/60 fixed top-0 left-0 h-screen w-full z-10' onClick={()=>setSideNav(!sideNav)}></div>
+                        <div className='bg-black/60 fixed top-0 left-0 h-screen w-full z-50' onClick={()=>setSideNav(!sideNav)}></div>
                     ) : null
                 }
 
@@ -91,8 +92,10 @@ export default function TopNav(){
 
                         </ul>
                     </nav>
+                
 
                 </div>
+                
                 
        </div>
        

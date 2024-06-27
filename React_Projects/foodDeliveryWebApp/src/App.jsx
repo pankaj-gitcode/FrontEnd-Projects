@@ -3,6 +3,7 @@ import { RecoilRoot } from 'recoil';
 
 const TopNav = lazy(()=>import('./components/TopNav'));
 const Features = lazy(()=>import('./components/Features'));
+const Featured = lazy(()=>import('./components/Featured'));
 
 export default function App(){
 
@@ -13,7 +14,8 @@ export default function App(){
       <RecoilRoot>
 
         <TopNav />
-        <Features />
+        {/* <Features /> */}
+        <Featured />
       </RecoilRoot>
 
 

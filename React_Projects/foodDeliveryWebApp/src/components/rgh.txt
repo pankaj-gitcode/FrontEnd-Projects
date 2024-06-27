@@ -40,6 +40,22 @@ https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672612/NetflixApp/ric_
 
 
 
+Learnings:
+1. There is React-icons, no need of external SVG
+2. use 'group' to change the CSS property of child element from the parent div
+3. optional chaining (images[imgIndex]?.url)
+4. auto image banner change using useEffect
+5. setting max-width for bigger screen and then use it like a canvas for image div
+
+{/* <div className='relative max-w-[1750px] w-full h-[400px] px-4 py-4 '> */}
+                {/* <div className='w-full h-full bg-green-500 rounded-xl bg-cover bg-center'
+                    style={{backgroundImage: `url(${images[imgIndex].url})`}} */}
+                
+                {/* </div> */}
+
+            {/* </div> */}
+
+
 1. Navbar
 2. Landing Page
 3. Marquee
