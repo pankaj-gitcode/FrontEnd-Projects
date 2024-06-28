@@ -46,6 +46,16 @@ Learnings:
 3. optional chaining (images[imgIndex]?.url)
 4. auto image banner change using useEffect
 5. setting max-width for bigger screen and then use it like a canvas for image div
+6. sliding prev and after images slides Ex; 3 elements array = [1,2,3], length=3
+    before:
+    - make condition to check the least index , here 0 
+    - once index comes to '0' reset the index to full length-1 else index-1
+    setImgIndex( imgIndex=> imgIndex===0? imgIndex.length-1: imgIndex-1 )
+
+    After:
+    - make condition to check highest index, here array.length-1=3-1=2 
+    - now if true then bring index to least index i.e. 0, if false then incrrease the index by 1
+     setImgIndex(imgIndex=>imgIndex === array.length-1? 0: imgIndex+1)
 
 {/* <div className='relative max-w-[1750px] w-full h-[400px] px-4 py-4 '> */}
                 {/* <div className='w-full h-full bg-green-500 rounded-xl bg-cover bg-center'
