@@ -40,8 +40,16 @@ export default function Featured(){
                     <RxDotFilled size={25} className='active:animate-ping'/>
                     <RxDotFilled size={25} className='active:animate-ping'/>
                 </div> */}
-                <div className='flex justify-center items-center cursor-pointer text-orange-600'>
-                    { images.map((e)=><RxDotFilled key={1} size={25} className='active:animate-ping' onClick={()=>setImgIndex(images.indexOf(e))}/>) }
+                
+                <div className='flex justify-center items-center cursor-pointer '>
+                    { images.map((e)=>
+                    <
+                    RxDotFilled key={1} 
+                    size={25} 
+                    className='active:animate-ping' onClick={()=>setImgIndex(images.indexOf(e))}
+                    />
+                    ) }
+
                 </div>
             </div>
         </>

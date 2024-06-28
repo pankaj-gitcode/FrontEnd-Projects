@@ -30,9 +30,13 @@
                     <AiOutlineClose size={25} onClick={()=>setSideNav(!sideNav)} className='cursor-pointer absolute right-4 top-4'/>
                 </div>
 
+Food images:
 https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672076/NetflixApp/burger_emxbtv.jpg
 https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672452/NetflixApp/pizza_osjb4f.jpg
 https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672612/NetflixApp/ric_a4ewxo.jpg
+
+Two phones together:
+https://res.cloudinary.com/ehizeex-shop/image/upload/v1672676822/NetflixApp/FC_two_phones.6ec9a842f905769677f9_m91off.webp
 
 1. Image slides serially one by one with some duration
 2. left & right button brings the image as per the Index from above
