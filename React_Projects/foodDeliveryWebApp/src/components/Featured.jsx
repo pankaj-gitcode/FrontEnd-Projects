@@ -20,7 +20,7 @@ export default function Featured(){
 
     return(
         <>
-            <div className='max-w-[1751px] w-full h-[400px] p-4 relative group '>
+            <div className='max-w-[1751px] w-full h-[500px] p-4 relative group '>
                         {/* -------- IMAGE CANVAS DIV ---------- */}
                 <div className='w-full h-full bg-green-200 rounded-2xl bg-cover bg-center duration-1000'
                  style={{backgroundImage: `url(${images[imgIndex]?.url})`}}>

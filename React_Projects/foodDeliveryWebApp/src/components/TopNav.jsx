@@ -12,7 +12,7 @@ export default function TopNav(){
 
     return(<>
        {/* ------------------------------------- NAVBAR DIV ---------------------------------- */}
-       <div className='flex items-center justify-between w-[100vw] sticky py-4 '>
+       <div className='flex items-center justify-between max-w-[1520px] w-full sticky py-4 '>
        
                 {/* ------------- MENU | BRAND-Name | TOGGLER --------- */}
             <div className='flex items-center justify-center px-2'>
