@@ -64,6 +64,42 @@ Learnings:
 7. dots under the Image banner, click on the each dot and image will change accordingly
     import {RxDotFilled} from 'react-icons/rx'
 
+8. splidejs.com ==> to create sliding effect [ https://www.npmjs.com/package/@splidejs/react-splide ]
+    1. Install npm slide in VSCode:
+        $ npm install @splidejs/react-splide
+    2. Import the dependency file:
+        import { Splide, SplideSlide } from '@splidejs/react-splide';
+        import '@splidejs/react-splide/css';
+
+        <Splide options={{perPage:4, gap: '0.5rem'}}>
+            <SplideSlide>
+                <div>...<img>....<div>....
+            </SplideSlide>
+        </Splide>
+
+9. TopPicks: Sliding Effect
+    1. how to create image less contrast such that the text[ex: price,title] appears on it will be visible
+        i. create 2 divs: one canvas-container & another container to contain Price, title & addTOCart button
+        ii. make the parent container(canvas) relative
+        iii. make Price+TItle container absolute and here make bg-color: black/50 (less contrast)
+        iv. image sohould be notunder Price+Title divs/container, but should be under parent div(canvas)
+            <div className='relative max-w-[1520px] w-full p-6 rounded-3xl'>
+            <div className='absolute bg-black/50 rounded-3xl text-white w-full h-full--'>---this w & h with black/50 will create color less contrast of image 
+                <h5>Orange Juice</h5><p>Price:$20</p>
+            </div>
+                <img src={item.img} alt className='rounded-3xl'/>
+            </div>
+
+
+h1-> Top Picks
+
+
+
+
+
+
+
+
 
 1. Navbar
 2. Landing Page
