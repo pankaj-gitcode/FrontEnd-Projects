@@ -6,6 +6,7 @@ const TopNav = lazy(()=>import('./components/TopNav'));
 const Featured = lazy(()=>import('./components/Featured'));
 const Delivery = lazy(()=>import('./components/Delivery'));
 const TopPicks = lazy(()=>import('./components/TopPicks'));
+const Meal = lazy(()=>import('./components/Meal'));
 
 export default function App(){
 
@@ -20,7 +21,9 @@ export default function App(){
         <Featured />
         <Delivery/>
         <TopPicks/>
+        <Meal/>
       </RecoilRoot>
+      
 
       </Suspense>
       </div>

@@ -11,9 +11,9 @@ export default function TopPicks(){
 
     return(<>
             <div>
-            <h1 className='text-center text-orange-500 font-bold text-xl lg:text-2xl py-6'>Top Picks</h1>
+            <h1 className='text-center text-orange-500 font-bold text-xl lg:text-2xl py-2'>Top Picks</h1>
             <div className='flex items-center max-w-[1520px] w-full mx-auto p-4 rounded-3xl'>
-        <Splide options={{perPage:4, gap:'0.2rem'}}>
+        <Splide options={{perPage:3, gap:'0.6rem', drag:'free', arrows:true}}>
                 {
                     topPicks.map((item)=>{
                         return(<>
@@ -21,10 +21,10 @@ export default function TopPicks(){
 
                         
                                 {/* parent container */}
-                            <div className='relative rounded-3xl'>
+                            <div key={item.id} className='relative rounded-3xl'>
                                     {/* child container: details */}
                                 <div className='absolute rounded-3xl bg-black/50 w-full h-full text-[#fff] mx-auto p-2'>
-                                    <h5>{item.title}</h5>
+                                    <h5 className='font-semibold'>{item.title}</h5>
                                     <p>{item.price}</p>
                                     <button className='absolute bottom-6 border-1 border-slate-400 px-2 py-1'>Add To Cart</button>
                                 </div>
