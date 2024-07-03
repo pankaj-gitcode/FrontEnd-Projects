@@ -7,9 +7,7 @@ export default function Meal(){
     const [categories, setCategories] = useRecoilState(categoryAtom);
     const [food, setFood] = useState([]);
 
-    // const newFood = menuMeal.filter(item=>item.category === categories)
-    // console.log('NEWFOOD: ', newFood)
-    // setFood(newFood)
+  
 
     useEffect(()=>{
         const foodFilter=()=>{
