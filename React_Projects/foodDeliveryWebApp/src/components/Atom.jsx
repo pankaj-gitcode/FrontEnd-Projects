@@ -100,7 +100,12 @@ export const topPicksAtom =atom({
 })
   
   
-  export const mealDataAtom = atom({
+export const categoryAtom = atom({
+  key: 'categoryAtom',
+  default: 'All'
+})
+
+export const mealDataAtom = atom({
     key: 'mealDataAtom',
     default: [
         {

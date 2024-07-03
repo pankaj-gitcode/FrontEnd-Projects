@@ -32,8 +32,8 @@ export default function TopNav(){
 
                 {/* ----------------- SEARCH | INPUT BOX ------------- */}
             <div className='flex items-center bg-gray-300 rounded-full sm:w-[400px] w-[500px] p-1 '>
-                <AiOutlineSearch size={25}/>
                 <input type="text" className='bg-transparent focus:outline-none w-full px-2' placeholder='Search your meal'/>
+                <AiOutlineSearch size={25} className='cursor-pointer'/>
             </div>
 
                 {/* ---------------------- CART ---------------- */}
@@ -53,9 +53,9 @@ export default function TopNav(){
                     ) : null
                 }
 
-                {/* click on huberger menu: side Nav bar appears with close icon  */}
+                {/* click on humberger menu: side Nav bar appears with close icon  */}
                 <div
-                    className={sideNav? 'fixed bg-white/100 top-0 left-0 h-screen w-[300px] z-10 duration-500'
+                    className={sideNav? 'fixed bg-white/100 top-0 left-0 h-screen w-[300px] z-50 duration-500'
                                     : 'fixed top-0 left-[-100%] z-10 h-screen w-full duration-500'}>
                     <AiOutlineClose size={15} className='absolute right-4 top-4 cursor-pointer' onClick={()=>setSideNav(!sideNav)}/>
 

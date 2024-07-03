@@ -81,7 +81,7 @@ Learnings:
     1. how to create image less contrast such that the text[ex: price,title] appears on it will be visible
         i. create 2 divs: one canvas-container & another container to contain Price, title & addTOCart button
         ii. make the parent container(canvas) relative
-        iii. make Price+TItle container absolute and here make bg-color: black/50 (less contrast)
+        iii. make Price+TItle+btn container absolute and here make bg-color: black/50 (less contrast)
         iv. image sohould be notunder Price+Title divs/container, but should be under parent div(canvas)
             <div className='relative max-w-[1520px] w-full p-6 rounded-3xl'>
             <div className='absolute bg-black/50 rounded-3xl text-white w-full h-full--'>---this w & h with black/50 will create color less contrast of image 
@@ -91,8 +91,8 @@ Learnings:
             </div>
 
 
-h1-> Top Picks
-
+10. filtering based on categories like : All, Pizza, Salad etc..
+    . use of useEffect, useState([]), onClick button
 
 
 
