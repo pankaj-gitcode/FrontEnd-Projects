@@ -7,25 +7,32 @@ const Featured = lazy(()=>import('./components/Featured'));
 const Delivery = lazy(()=>import('./components/Delivery'));
 const TopPicks = lazy(()=>import('./components/TopPicks'));
 const Meal = lazy(()=>import('./components/Meal'));
+const Categories = lazy(()=>import('./components/Categories'));
+const NewsLetter = lazy(()=>import('./components/NewsLetter'));
+const Footer = lazy(()=>import('./components/Footer'));
 
 export default function App(){
 
   return(
     <>
       <div>
-      <Suspense fallback={<p>Loading...</p>}>
-      <RecoilRoot>
+        <Suspense fallback={<p>Loading...</p>}>
+          <RecoilRoot>
 
-        <TopNav />
-        {/* <Features /> */}
-        <Featured />
-        <Delivery/>
-        <TopPicks/>
-        <Meal/>
-      </RecoilRoot>
-      
+              <TopNav />
+              {/* <Features /> */}
+              <Featured />
+              <Delivery />
+              <TopPicks />
+              <Meal />
+              <Categories />
+              <NewsLetter />
+              <Footer />
 
-      </Suspense>
+          </RecoilRoot>
+        
+
+        </Suspense>
       </div>
     </>
   )

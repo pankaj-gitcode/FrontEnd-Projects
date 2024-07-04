@@ -7,8 +7,7 @@ export default function Meal(){
     const [categories, setCategories] = useRecoilState(categoryAtom);
     const [food, setFood] = useState([]);
 
-  
-
+        // ----------- sorting based on categories --------------
     useEffect(()=>{
         const foodFilter=()=>{
             if(categories === 'All'){
@@ -39,7 +38,7 @@ export default function Meal(){
 
            
 
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1520px] w-full p-6'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1520px] w-full py-6 mx-auto'>
                 {
                     food.map((item)=>{
 
