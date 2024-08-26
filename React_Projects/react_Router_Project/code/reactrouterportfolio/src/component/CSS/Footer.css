@@ -1,0 +1,84 @@
+#footer{
+    /* width:100vw; */
+    /* background-color: #ababab; */
+    /* position:absolute; */
+    /* bottom:0; */
+    /* z-index:99; */
+    /* position:sticky; */
+
+    box-shadow:2px -2px 8px 2px rgba(0,0,0,0.2);
+}
+/* ----------Footer-top------------- */
+
+#footer-container-top{
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-wrap:wrap;
+
+    overflow:hidden;
+    padding: 2% 8%;
+}
+/* /logo, name + title has been taken from App.css due to same id of Header.jsx/ */
+
+/* -----Resource Section---- */
+.options ul{
+    list-style: none;
+
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight:600;
+
+    line-height:2;
+    padding-top: 15px;
+}
+.options ul li a{
+    text-decoration: none;
+    color: #424242;  
+}
+
+
+/* ----------Footer-bottom---------- */
+
+/*Horizontal line*/
+#hr{
+    width: 3vw;
+    border-top: 6px dotted grey;
+    /* border-style:dotted; */
+    margin-left: 45%;
+    margin-bottom: 2%;
+}
+/*copyright para*/
+#footer-container-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#copyright{
+    padding: 10px 20px;
+    font-family:sans-serif;
+    font-size: 0.7rem;
+    /* text-align:center; */
+}
+#copyright-para{
+    padding:10px 20px;
+}
+
+/* -------Social Handles------- */
+#handles{
+    
+    /* background:linear-gradient( rgba(0,0,0,0.2), #fff); */
+}
+.handles-link{
+    text-decoration:none;
+    color: #424242;
+}
+
+.icon{
+    padding:10px 15px;
+    cursor: pointer;
+}
+#spn{
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.2);
+}

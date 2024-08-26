@@ -1,0 +1,274 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    /* background-color: rgb(240, 231, 231); */
+    font-family: poppins, sans-serif, ubuntu;
+}
+
+/* bmi introduction */
+#main{
+    width: 100%;
+    background: #fff;
+}
+
+    
+#bmi-container{
+    width: 60%;
+    height: 80vh;
+    /* background: linear-gradient(to right, rgba(203, 229, 245, 0.2), rgb(151, 201, 231)); */
+    background:linear-gradient(to right,rgba(252, 252, 55, 0.5), yellow);
+    /*spacing from main screen*/
+    margin: 40px 80px 20px 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.2);
+    /*to adjust it's children div #bmi-box*/
+    position: relative;
+}
+/*child div containing h1 and p tags*/
+#bmi-box-left{
+    /* background-color: yellow; */
+
+    position: absolute;
+    /*spacing from #bmi-container div, it's parent div*/
+    top: 20vh;
+    /*spacing from left & right*/
+    margin: 0 10%;
+
+
+}
+/*<h1> title styling*/
+#bmi-title{
+    font-size: 50px;
+    /* background-color: green; */
+    width: 65%;
+}
+/*title description/definition styling*/
+#bmi-def{
+    width: 60%;
+    font-size: 12.9px;
+    font-weight: bold;
+    color: #757373;
+    /*spacing from title and left, right*/
+    margin: 20px 30% 0 0;
+    /*paragraph line height spacing*/
+    line-height: 1.3rem;
+}
+/* ------------------Right Box---------------- */
+#main{
+    /*parent of right box is main screen make it relative*/
+    position: relative;
+}
+#bmi-box-right{
+    width: 40vw;
+    /* background-color: rgb(126, 181, 126); */
+    /*make position absolute and spacing from top & left*/
+    position:absolute;
+    left: 600px;
+    top: 50px;
+
+    /* height: 50vh; */
+
+    display: flex;
+    flex-direction:column;
+    /*increase spacing height between all elements/tags*/
+    line-height: 40px;
+
+    /*coloring and create shadow effect*/
+    
+    /* background: #fff; */
+    border-radius: 10px;
+    border-width:100vw;
+    /* box-shadow: 5px 5px 8px 2px rgba(104, 171, 212, 0.2); */
+    box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.2);
+    /* box-shadow:-5px -5px 8px 2px rgba(0,0,0,0.2) ; */
+    /* background: linear-gradient(rgba(255, 254, 258, 0.9),#F1F4FF); */
+    background: rgb(254, 255, 255);
+    
+}
+
+/*spacing and alignment of tags inside right box*/
+.bmi-elements{
+    padding: 8px 6%;
+    font-size: 12.9px;
+}
+.radio-id{
+    padding: 0 100px 0 5px;
+    font-weight:800;
+}
+
+#measurements{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+
+    font-size: 13px;
+    font-weight: 600;
+    color:#625f5f;
+}
+/*spacing and border radius of input boxes*/
+#measurements input{
+    padding: 10px 0 20px;
+    border-radius: 10px;
+    border:1px solid #ababab;
+}
+
+/*BMI button styling*/
+#btn{
+    /* background-color: red; */
+    width: fit-content;
+    margin-left: 60%;
+}
+#bmi-btn{
+    border-radius: 5px;
+    padding:5px 20px;
+    box-shadow: 2px 2px 1px 2px rgba(0,0,0,0.2);
+    border: 1px solid white;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+/*styling welcome details box*/
+#info{
+    background-color: royalblue;
+    border-top-right-radius:40px;
+    /* border-bottom-right-radius: 40px; */
+    /* border-top-left-radius: 40px; */
+    border-bottom-left-radius: 40px;
+    /*below is shorthand for above border top,bottom radius*/
+    /* border-radius: 40px; */
+    /*create top border width with light grey*/
+    border-top:6px solid #f5f1f1;
+    margin: 5px 10% 20px;
+    /* color: #fff; */
+    color:#000;
+
+    /* background: linear-gradient(to left, rgba(59, 180, 202, 0.2), rgb(73, 168, 228)); */
+    /* background: linear-gradient(rgba(252, 252, 55,0.5), yellow); */
+    background: rgb(254, 255, 255);
+    box-shadow:  6px 6px 6px 2px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px){
+
+
+    #bmi-container{
+        width: 80vw;
+        height: 80vh;
+        background: linear-gradient(to right, rgba(203, 229, 245, 0.2), rgb(151, 201, 231));
+        /*spacing from main screen*/
+        margin: 40px 80px 20px 40px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.2);
+        /*to adjust it's children div #bmi-box*/
+        position: relative;
+
+    }
+    /*child div containing h1 and p tags*/
+    #bmi-box-left{
+        /* background-color: yellow; */
+
+        position: absolute;
+        /*spacing from #bmi-container div, it's parent div*/
+        top: 10vh;
+        /*spacing from left & right*/
+        margin: 0 10%;
+    }
+    /*<h1> title styling*/
+    #bmi-title{
+        font-size: 2rem;
+        text-align:center;
+        margin-left: 30px;
+
+    }
+
+    /*title description/definition styling*/
+    #bmi-def{
+        /* background-color: orange; */
+        width: 70vw;
+        height:25vh;
+        font-size: 1rem;
+        color: #757373;
+        /*spacing from title and left, right*/
+        /* margin-left:5%; */
+        /*paragraph line height spacing*/
+        line-height: 1.5rem;
+        text-align:justify;
+
+        position: absolute;
+        left:-6px;
+    }
+
+
+    /* ------------------Right Box---------------- */
+#main{
+    /*parent of right box is main screen make it relative*/
+    position: relative;
+}
+#bmi-box-right{
+    width: 70vw;
+    /* background-color: rgb(126, 181, 126); */
+    /*make position absolute and spacing from top & left*/
+    position:absolute;
+    left: 60px;
+    top: 80%;
+
+    /* height: 50vh; */
+
+    display: flex;
+    flex-direction:column;
+    /*increase spacing height between all elements/tags*/
+    line-height: 40px;
+
+    /*coloring and create shadow effect*/
+    
+    background: #fff;
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 8px 2px rgba(104, 171, 212, 0.2); */
+    box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.9);
+    box-shadow:-5px -5px 8px 2px rgba(0,0,0,0.2) ;
+    background: linear-gradient(rgba(255, 254, 258, 0.6),#F1F4FF);
+    
+}
+.radio-id{
+    padding: 0 20px 0 5px;
+    font-size: 16px;
+    font-weight:900;
+}
+/*height & weight alignment*/
+#measurements{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4px;
+
+    font-size: 16px;
+    font-weight: 600;
+    color:#625f5f;
+}
+#btn{
+   position:absolute;
+   left:0;
+   top:45%;
+   
+    
+}
+
+/*styling welcome details box*/
+#info{
+    font-size: 18px;
+    border-radius: 10px;
+    background:royalblue;
+    margin-left: 5%;
+
+    box-shadow: 5px 5px 8px 3px rgba(0,0,0, 0.3);
+}
+
+}

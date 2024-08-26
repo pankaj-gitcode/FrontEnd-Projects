@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- bmi introduction -->
+    <div id="main">
+
+        
+        <div id="bmi-container">
+
+            <div id="bmi-box-left">
+                <h1 id="bmi-title">Body Mass Index Calculator</h1>
+                <p id="bmi-def">
+                    Better understand your weight in ralation to your height using our body mass index(BMI)
+                    calculator.While BMI is not the sole determinant of a healthy weight.It offers a valuable starting 
+                    point to evaluate your overall health and well-being.
+                </p>
+            </div>
+        </div>   
+            <!-- ------------------Right Box---------------- -->
+            <div id="bmi-box-right">
+
+                <div id="bmi-details" class="bmi-elements">
+                    <h1>Enter your details below</h1>
+                </div>
+                <div id="radio-btns" class="bmi-elements">
+                    <input type="radio" id="metric"><label for="metric" class="radio-id">Metric</label>
+                    <input type="radio" ><label for="Imperial" class="radio-id">Imperial</label>    
+                </div>
+                <div id="measurements" class="bmi-elements">
+                    <div id="ht">
+                        <label for="height">
+                            Height
+                                <select id="height-unit">
+                                    <option value="cm">CM</option>
+                                    <option value="m">Meter</option>
+                                </select>
+                        </label>
+                        <br>
+                        <input type="number" step="0.1" id="height" class="ht" placeholder="0" name="height">
+                    </div>
+                    <div id="wt">
+                        <label for="weight">
+                            Weight
+                                <select id="weight-unit">
+                                    <option value="kg">KG</option>
+                                    <option value="lb">lb</option>
+                                </select>
+                        </label>
+                        <br>
+                        <input type="number" step="0.1" id="weight" placeholder="0" name="weight">
+                    </div>
+                    <div id="btn"><button id="bmi-btn">Get BMI</button></div>
+                </div>
+
+
+                <div id="info" class="bmi-elements">
+                    <h2>Welcome!</h2>
+                    <p>Enter your height and weight and you'll see your BMI result here</p> 
+                    
+                </div>
+
+            </div>
+
+        
+
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

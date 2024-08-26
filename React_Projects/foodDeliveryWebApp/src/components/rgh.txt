@@ -1,0 +1,113 @@
+
+1. Categories.jsx
+2. Delivery.jsx
+3. Features.jsx
+4. Footer.jsx
+5. Meal.jsx
+6. NewsLetter.jsx
+7. TopNav.jsx
+8. TopPicks.jsx
+
+# Installed 1 react feature [post installation visible in package.Json file]:
+    npm i react-icons
+    import {AiOutlineMenue, AiOutlineSearch, AiOutlineClose, AiFillTag} frmo 'react-icons/ai'
+    import {BsChevronCompactLeft, BsChevronCompactRight} from 'react-icons/bs'
+
+    Ex: <AiOutlineMenue size={25} /> ===> huberger menue
+
+
+
+{
+                    sideNav? (
+                        <div className='bg-black/60 fixed left-0 top-0 z-10 w-full h-screen'></div>
+                    ) : null
+                }
+
+                <div className={
+                    sideNav?  'fixed top-0 left-0 w-[300px] bg-red-500 duration-300 h-screen z-10' 
+                            : 'fixed top-0 left-[-100%] w-[300px] duration-300 h-screen z-10'
+                }>
+                    <AiOutlineClose size={25} onClick={()=>setSideNav(!sideNav)} className='cursor-pointer absolute right-4 top-4'/>
+                </div>
+
+Food images:
+https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672076/NetflixApp/burger_emxbtv.jpg
+https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672452/NetflixApp/pizza_osjb4f.jpg
+https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672612/NetflixApp/ric_a4ewxo.jpg
+
+Two phones together:
+https://res.cloudinary.com/ehizeex-shop/image/upload/v1672676822/NetflixApp/FC_two_phones.6ec9a842f905769677f9_m91off.webp
+
+1. Image slides serially one by one with some duration
+2. left & right button brings the image as per the Index from above
+
+
+
+
+Learnings:
+1. There is React-icons, no need of external SVG
+2. use 'group' to change the CSS property of child element from the parent div
+3. optional chaining (images[imgIndex]?.url)
+4. auto image banner change using useEffect
+5. setting max-width for bigger screen and then use it like a canvas for image div
+6. sliding prev and after images slides Ex; 3 elements array = [1,2,3], length=3
+    before:
+    - make condition to check the least index , here 0 
+    - once index comes to '0' reset the index to full length-1 else index-1
+    setImgIndex( imgIndex=> imgIndex===0? imgIndex.length-1: imgIndex-1 )
+
+    After:
+    - make condition to check highest index, here array.length-1=3-1=2 
+    - now if true then bring index to least index i.e. 0, if false then incrrease the index by 1
+     setImgIndex(imgIndex=>imgIndex === array.length-1? 0: imgIndex+1)
+
+7. dots under the Image banner, click on the each dot and image will change accordingly
+    import {RxDotFilled} from 'react-icons/rx'
+
+8. splidejs.com ==> to create sliding effect [ https://www.npmjs.com/package/@splidejs/react-splide ]
+    1. Install npm slide in VSCode:
+        $ npm install @splidejs/react-splide
+    2. Import the dependency file:
+        import { Splide, SplideSlide } from '@splidejs/react-splide';
+        import '@splidejs/react-splide/css';
+
+        <Splide options={{perPage:4, gap: '0.5rem'}}>
+            <SplideSlide>
+                <div>...<img>....<div>....
+            </SplideSlide>
+        </Splide>
+
+9. TopPicks: Sliding Effect
+    1. how to create image less contrast such that the text[ex: price,title] appears on it will be visible
+        i. create 2 divs: one canvas-container & another container to contain Price, title & addTOCart button
+        ii. make the parent container(canvas) relative
+        iii. make Price+TItle+btn container absolute and here make bg-color: black/50 (less contrast)
+        iv. image sohould be notunder Price+Title divs/container, but should be under parent div(canvas)
+            <div className='relative max-w-[1520px] w-full p-6 rounded-3xl'>
+            <div className='absolute bg-black/50 rounded-3xl text-white w-full h-full--'>---this w & h with black/50 will create color less contrast of image 
+                <h5>Orange Juice</h5><p>Price:$20</p>
+            </div>
+                <img src={item.img} alt className='rounded-3xl'/>
+            </div>
+
+
+10. filtering based on categories like : All, Pizza, Salad etc..
+    . use of useEffect, useState([]), onClick button
+
+
+
+
+
+
+
+
+1. Navbar
+2. Landing Page
+3. Marquee
+4. About section
+5. Playful (eye) animation
+6. Cards
+7. Another Cards
+8. ready to start section
+9. Footer
+
