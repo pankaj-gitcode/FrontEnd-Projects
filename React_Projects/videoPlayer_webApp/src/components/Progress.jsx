@@ -6,9 +6,9 @@ export default function Progress(){
     const progressSlider = useRecoilValue(progressUpdateAtom);
     console.log('Progress-Slider: ', progressSlider)
     return(<>
-        <div className='bg-green-500'>
+        <div className=''>
             <div>
-            This is Progress
+            <progress value={progressSlider} max='100'></progress>
             </div>
         </div>
     </>)

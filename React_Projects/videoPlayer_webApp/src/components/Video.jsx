@@ -26,6 +26,7 @@ export default function Video(){
                 </video>
             </div>
         </div>
+                
             {/* -------------- OTHER COMPONENETS ---------- */}
             <div className='absolute bottom-[28vh] left-6 '>
                 <div className='flex gap-20 '>
