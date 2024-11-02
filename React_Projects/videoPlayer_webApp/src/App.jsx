@@ -5,7 +5,7 @@ const Video = lazy(()=>import('./components/Video'));
 
 export default function App(){
   return(<>
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<h1>Loading...</h1>}>
       <RecoilRoot>
         <Video />
       </RecoilRoot>
