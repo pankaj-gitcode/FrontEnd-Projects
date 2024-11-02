@@ -5,10 +5,10 @@ import { useRecoilState } from 'recoil';
 import { progressUpdateAtom } from './Atom';
 
 export default function Video(){
-    const [volume, setVolume] = useState(0.5);
+    
     const videoRef = useRef(null);
     const [progressSlider, setProgressSlider] = useRecoilState(progressUpdateAtom);
-    console.log('SPEAKER: ', videoRef.current.Volume)
+   
     return(<>
     <div className='relative font-bold w-full h-screen bg-slate-500 flex flex-col items-center justify-center'>
         <div className='w-full h-full flex items-center justify-center'>
@@ -22,8 +22,7 @@ export default function Video(){
                     onTimeUpdate={(e)=>
                         setProgressSlider((e.target.currentTime / e.target.duration)*100)
                     }
-                    onVolumeChange = {e=>setVolume(e.target.volume)}
-                    // volume= {volume}
+                    
                     
                 >
                     <source src={'/video/hero.mp4'} type='video/mp4'/>
@@ -35,7 +34,7 @@ export default function Video(){
             <div className='absolute bottom-[28vh] left-6 '>
                 <div className='flex gap-20 '>
                 <Progress />
-                <Volume/>
+                {/* <Volume/> */}
                 </div>
             </div>
     </div>
