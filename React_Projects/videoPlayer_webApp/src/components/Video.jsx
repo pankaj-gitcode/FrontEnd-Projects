@@ -6,9 +6,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import CarouselItem from 'react-bootstrap/CarouselItem';
 // import CarouselCaption from 'react-bootstrap/CarouselCaption'
 import AllVideos from './AllVideos';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 export default function Video(){
    const videos = useRecoilValue(videosAtom);
+   useGSAP(()=>{
+    gsap.fromTo('#video', {
+        scale:0
+    }, {
+        scale: 2,
+
+    })
+    
+   }, [])
+
     return(<>
         <div className='w-full h-screen bg-slate-500'>
             <div className='h-full flex items-center justify-center'>
