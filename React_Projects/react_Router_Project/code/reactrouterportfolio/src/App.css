@@ -102,7 +102,41 @@ html,body{
 
 /* ---------------Media Query-------------- */
 
+@media screen and (max-width:800px){
+  #logo{
+    /* padding-right: 2px; */
+  }
+  /* ------header ul------ */
+  #navlink{
+    position:relative;
+    display:block;
+    
+  }
+  #navlink-ul{
+    /* margin-left:2px; */
+    display:flex;
+    flex-direction: column;
+    gap: 8px;
+    
 
+    /* background-color: green; */
+  }
+
+  #login{
+    display:flex;
+    flex-direction:column;
+    gap: 6px;
+  
+  }
+  #login-link{
+    /* background-color: orange; */
+    
+  }
+  #getstarted-link{
+    /* background-color: yellow; */
+  }
+
+}
 
 
 

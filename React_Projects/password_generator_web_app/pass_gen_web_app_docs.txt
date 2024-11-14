@@ -1,0 +1,4 @@
+features to include in password generated webApp:
+1. length	2.characters (special chars)	3. Numbers
+4. Exclude similar characters	5. encrypt the password with MD5
+6. result @ every step: fair password, good password, strong password & strongest pssword: all upercase, lowecase,numbers, special chars, no duolicates, hashed

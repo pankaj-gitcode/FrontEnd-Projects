@@ -1,21 +1,15 @@
 import React, { useEffect } from 'react'
+import { FaLinkedin, FaFacebookSquare, FaInstagram, FaTwitterSquare, FaGithubSquare, FaLinkedinIn, FaInstagramSquare } from 'react-icons/fa';
 
 export default function Footer(){
 
+        // -------- Adding Padding to <li> elements --------
     useEffect(()=>{
-        const listElem = document.getElementById('ulli');
+        const listElem = document.querySelector('#ulli');
         console.log('LIST: ',listElem)
-        for(let i=0; i<4; i++){
-            const ul = listElem.children[i];
-            console.log("THIS IS UL:", ul)
-            // Array.from(ul).forEach(e=>Array.from(e).forEach(e=>e.backgrounColor = 'red'))
-            for(let j=0; j<4; j++){
-                const LI = ul.children[j]
-                console.log('LI', LI)
-                LI.setAttribute('class', 'py-2')
-            }
-            
-        }
+        
+        Array.from(listElem.children).map(e=>Array.from(e.children).map(e=>e.setAttribute('class', 'py-1')))
+           
     }, [])
 
     return(<>
@@ -23,14 +17,15 @@ export default function Footer(){
             <div className='max-w-[1520px] bg-[#24262b] mx-auto text-[#fff] grid md:grid-cols-2 gap-6 p-5 '>
                     {/* ------------------ SOCIAL HANDLES ------------- */}
                 <div className='w-[90%]'>
-                    <h1 className='text-orange-600 font-bold text-xl lg:text-3xl'>ApnaRasoi</h1>
+                    <h1 className='text-orange-600 font-bold text-xl lg:text-3xl '>ApnaRasoi</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eveniet corrupti recusandae similique, molestiae voluptatem omnis sapiente! Ut, porro tempora!</p>
-                    <div>
-                        <fb/>
-                        <fb/>
-                        <fb/>
-                        <fb/>
-                        <fb/>
+                    {/* <div className='h-5 w-5 rounded-full  bg-yellow-500 bg-gradient-to-l from-yellow-500 to-red-500 animate-spin duration-1000'></div> */}
+                    <div className='flex items-center gap-6 py-6 cursor-pointer'>
+                        <FaGithubSquare  size={25} />
+                        <FaLinkedin  size={25}/>
+                        <FaTwitterSquare  size={25}/>
+                        <FaInstagramSquare  size={25}/>
+                        <FaFacebookSquare size={25}/>
                     </div>
                 </div>
 
