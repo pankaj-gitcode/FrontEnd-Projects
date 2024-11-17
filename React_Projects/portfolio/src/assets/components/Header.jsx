@@ -9,9 +9,10 @@ export const Header = () => {
       <div className='w-[92vw] ml-10 flex items-center justify-between'>
 
                 {/* ----------- LOGO ---------- */}
-        <div className='bg-white bg-transparent border-[0.2vw] p-2
-         font-[font1]'>
-            <h1 className=' pl-1 uppercase text-3xl'>pankaj <span>aditya</span></h1>
+        <div className='font-[font1] pl-10 '>
+            <h1 className=' pl-1 uppercase text-6xl 
+            text-shdow'>
+            p. .</h1>
         </div>
               {/* ----------- BUTTON --------- */}
         <div className='flex items-center gap-5'>

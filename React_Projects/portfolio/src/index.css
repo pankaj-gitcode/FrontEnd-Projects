@@ -42,3 +42,8 @@ html,body{
   font-family: font6;
   src: url('./assets/fonts/font-6.woff2');
 }
+
+/* ----LOGO---- */
+.text-shdow{
+  text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.8)
+}
