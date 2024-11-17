@@ -10,7 +10,7 @@ export const Header = () => {
 
                 {/* ----------- LOGO ---------- */}
         <div className='font-[font1] pl-10 '>
-            <h1 className=' pl-1 uppercase text-6xl 
+            <h1 className=' pl-1 uppercase text-4xl lg:text-6xl 
             text-shdow'>
             p. .</h1>
         </div>
