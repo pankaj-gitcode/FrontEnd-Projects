@@ -47,3 +47,11 @@ html,body{
 .text-shdow{
   text-shadow: 2px 2px 30px rgba(255, 255, 255, 0.6)
 }
+
+#imgDiv{
+  perspective: 2000px;
+}
+
+#shortInfo{
+  transform: rotateY(40deg)
+}

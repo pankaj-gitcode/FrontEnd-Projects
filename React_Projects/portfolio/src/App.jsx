@@ -7,7 +7,7 @@ export default function App(){
   return(<>
     <div className='font-[font6]'>
       <Header/>
-      <ShortInfo/>
+      
       <ImagePage/>
     </div>
   </>)
