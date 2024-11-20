@@ -1,9 +1,21 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 export default function CustomCursor(){
     const msRef = useRef();
+    const [pos, setPos] = useState({X:0,Y:0})
     const mouseMove = (e)=>{
-        msRef.current.style.transform = `rotate(${e.clientX}deg)`
+        
+        // (0,0) starts from left top corner in main screen, need to start @ middle of child div
+        const xCord = 
+
+        setPos(prev=>({
+            ...prev, 
+            X:1,
+            Y:1
+        }))
+        msRef.current.style.transform = `rotate(${pos.X, pos.Y}deg)`
+        // msRef.current.style.transform = `rotate(${e.clientX, e.clientY}deg) `
+
     }
     return(<>
         {/* --------- container --------- */}
