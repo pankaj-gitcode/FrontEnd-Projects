@@ -7,8 +7,8 @@ export default function CustomCursor(){
         
         // (0,0) starts from left top corner in main screen, need to start @ middle of child div
        
-        const xCord =  -(e.clientX - msRef.current.getBoundingClientRect().x - msRef.current.getBoundingClientRect().width/2)/20;
-        const yCord = -(e.clientY - msRef.current.getBoundingClientRect().y - msRef.current.getBoundingClientRect().height/2)/20;
+        const xCord =  (e.clientX - msRef.current.getBoundingClientRect().x - msRef.current.getBoundingClientRect().width/2)/10;
+        const yCord = -(e.clientY - msRef.current.getBoundingClientRect().y - msRef.current.getBoundingClientRect().height/2)/10;
         // console.log('x.y_cord: ', [xCord, yCord]);
         setPos(prev=>({
             ...prev, 
@@ -21,12 +21,12 @@ export default function CustomCursor(){
     }
     return(<>
         {/* --------- container --------- */}
-        <div  onMouseMove={(e)=>{mouseMove(e)}}
+        <div id='cont' onMouseMove={(e)=>{mouseMove(e)}}
         className='h-screen flex items-center justify-center  '>
             
             {/* ------------ child ----------- */}
             
-            <div id='cont' ref={msRef} className='bg-gray-500'>
+            <div  ref={msRef} className='bg-gray-500'>
                 <h1 className='text-6xl'>Hello i'm Frontend <br/>Developer </h1>
                 <h1 className='text-6xl'>To Hire</h1>
             </div>
