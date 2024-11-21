@@ -1,3 +1,5 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import React, { useRef, useState } from 'react'
 
 export default function CustomCursor(){
@@ -15,10 +17,19 @@ export default function CustomCursor(){
             X:xCord,
             Y:yCord
         }))
-        msRef.current.style.transform = `rotateX(${pos.X}deg) rotateY(${pos.Y}deg)`
+        // msRef.current.style.transform = `rotateX(${pos.X}deg) rotateY(${pos.Y}deg)`
         // msRef.current.style.transform = `rotate(${e.clientX, e.clientY}deg) `
 
     }
+
+    // implimenting GSAP
+    useGSAP(()=>{
+        gsap.to(msRef.current,{
+            transform: `rotateX(${pos.X}deg) rotateY(${pos.Y}deg)` ,
+            duration:2,
+        })
+
+    }, [pos.X, pos.Y])
     return(<>
         {/* --------- container --------- */}
         <div id='cont' onMouseMove={(e)=>{mouseMove(e)}}
@@ -26,7 +37,7 @@ export default function CustomCursor(){
             
             {/* ------------ child ----------- */}
             
-            <div  ref={msRef} className='bg-gray-500'>
+            <div  ref={msRef} className='bg-gray-500' id='chldDiv'>
                 <h1 className='text-6xl'>Hello i'm Frontend <br/>Developer </h1>
                 <h1 className='text-6xl'>To Hire</h1>
             </div>
