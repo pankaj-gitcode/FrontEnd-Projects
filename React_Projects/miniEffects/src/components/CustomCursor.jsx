@@ -27,6 +27,7 @@ export default function CustomCursor(){
         gsap.to(msRef.current,{
             transform: `rotateX(${pos.X}deg) rotateY(${pos.Y}deg)` ,
             duration:2,
+            ease: 'back'
         })
 
     }, [pos.X, pos.Y])
