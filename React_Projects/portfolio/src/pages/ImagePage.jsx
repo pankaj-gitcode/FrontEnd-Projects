@@ -1,13 +1,40 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Page1Bottom from '../assets/components/Page1Bottom'
 import ShortInfo from '../assets/components/ShortInfo'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 export const ImagePage = () => {
+  const [cord, setCord] = useState({
+    x: 0,
+    y: 0
+  })
   const shortInfoRef = useRef();
   const mouseMove = (e)=>{
-    // console.log([e.clientX, e.clientY])
+    const xCord = (e.clientX-shortInfoRef.current.getBoundingClientRect().x-shortInfoRef.current.getBoundingClientRect().width/2)/50;
+    const yCord = -(e.clientY-shortInfoRef.current.getBoundingClientRect().y-shortInfoRef.current.getBoundingClientRect().height/2)/20;
+
+    setCord(prev=>({
+      ...prev,
+      x:xCord,
+      y:yCord
+    }))
+    // shortInfoRef.current.style.transform = `rotateX(${cord.x}deg) rotateY(${cord.y}deg)`
+
   }
-  console.log("SHRT:==> ", shortInfoRef.current )
+  //implement GSAP
+  useGSAP(()=>{
+    gsap.to(shortInfoRef.current, {
+      transform: `rotateX(${cord.x}deg) rotateY(${cord.y}deg)`,
+      duration: 1,
+      yoyoEase: true,
+      ease: 'power1.inOut'
+    })
+  }, [cord.x, cord.y])
+
+
+
+  // console.log("SHRT:==> ", shortInfoRef.current.getBoundingClientRect() )
   return (
     <div onMouseMove={(e)=>{
       mouseMove(e)

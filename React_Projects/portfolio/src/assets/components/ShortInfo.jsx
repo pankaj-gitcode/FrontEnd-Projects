@@ -5,7 +5,7 @@ export default function ShortInfo({infoRef}){
 
     return(<>
         <div ref={infoRef}  id='shortInfo'
-        className='bg-gray-500 absolute z-20 flex flex-col items-center justify-center
+        className=' absolute z-20 flex flex-col items-center justify-center
         lg:top-56 top-32 sm:top-36 left-12 sm:left-20 lg:text-5xl text-4xl sm:text-6xl
         '>
             <h1 className='font-[font4] lg:text-[5vw]'>
