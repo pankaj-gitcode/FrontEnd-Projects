@@ -1,14 +1,10 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
-export default function ShortInfo(){
-    const infoRef = useRef();
-
-    const mouseMove = (e)=>{
-        console.log(infoRef.current.getBoundingClientRect());
-    }
+export default function ShortInfo({infoRef}){
+    
 
     return(<>
-        <div ref={infoRef} onMouseMove={(e)=>mouseMove(e)} id='shortInfo'
+        <div ref={infoRef}  id='shortInfo'
         className='bg-gray-500 absolute z-20 flex flex-col items-center justify-center
         lg:top-56 top-32 sm:top-36 left-12 sm:left-20 lg:text-5xl text-4xl sm:text-6xl
         '>

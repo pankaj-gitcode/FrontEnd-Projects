@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Page1Bottom from '../assets/components/Page1Bottom'
 import ShortInfo from '../assets/components/ShortInfo'
 
 export const ImagePage = () => {
+  const shortInfoRef = useRef();
   const mouseMove = (e)=>{
-    console.log([e.clientX, e.clientY])
+    // console.log([e.clientX, e.clientY])
   }
+  console.log("SHRT:==> ", shortInfoRef.current )
   return (
     <div onMouseMove={(e)=>{
       mouseMove(e)
@@ -24,7 +26,8 @@ export const ImagePage = () => {
                   top-10 sm:top-10 md:top-20 lg:top-0 pl-20
                   '
           />
-          <ShortInfo />
+         
+          <ShortInfo infoRef={shortInfoRef}/>
           <div >
           <Page1Bottom />
           </div>
