@@ -30,9 +30,18 @@ export default function Page1Bottom(){
     })
     return(<>
         
-        <div className='btm-text absolute bottom-10 left-20 txt-shadow-black text-xl'>
-            <h1 className='font-[font1]'>BRAND DESIGN | WEBSITE DESIGN</h1>
-            <h1 className='font-[font2]'>BESPOKE FREELANCE</h1>
+        <div className='btm-text absolute bottom-10 left-20 txt-shadow-black text-xl flex flex-col justify-start right-20'>
+            <h1 className='font-[font1] hidden sm:block'>BRAND DESIGN | WEBSITE DESIGN</h1>
+            <h1 className='font-[font2] hidden sm:block'>BESPOKE FREELANCE</h1>
+        </div>
+
+        <div className='btm-text absolute bottom-10 left-20 txt-shadow-black text-xl flex flex-col justify-start right-20'>
+            <h1 className='font-[font1] sm:hidden block'>BRAND & WEBSITE DESIGN</h1>
+            <h1 className='font-[font2] sm:hidden block'>BESPOKE FREELANCE</h1>
+        </div>
+
+        <div>
+
         </div>
             
         <div className='icon absolute bottom-10 right-10 '>

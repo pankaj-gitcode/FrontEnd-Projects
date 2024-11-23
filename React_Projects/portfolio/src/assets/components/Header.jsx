@@ -28,7 +28,7 @@ export const Header = () => {
             p. .</h1>
         </div>
               {/* ----------- BUTTON --------- */}
-        <div className='flex items-center sticky gap-5 hireMeBtn'>
+        <div className='flex items-center gap-5 fixed right-10 hireMeBtn'>
           <button className=' 
           border-4 bg-black border-white px-8 py-3 sm:px-10 lg:py-2  
           rounded-full hover:bg-gray-500 cursor-pointer 
