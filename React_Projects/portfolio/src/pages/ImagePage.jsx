@@ -11,7 +11,7 @@ export const ImagePage = () => {
   })
   const shortInfoRef = useRef();
   const mouseMove = (e)=>{
-    const xCord = (e.clientX-shortInfoRef.current.getBoundingClientRect().x-shortInfoRef.current.getBoundingClientRect().width/2)/50;
+    const xCord = (e.clientX-shortInfoRef.current.getBoundingClientRect().x-shortInfoRef.current.getBoundingClientRect().width/2)/20;
     const yCord = -(e.clientY-shortInfoRef.current.getBoundingClientRect().y-shortInfoRef.current.getBoundingClientRect().height/2)/20;
 
     setCord(prev=>({
@@ -26,9 +26,10 @@ export const ImagePage = () => {
   useGSAP(()=>{
     gsap.to(shortInfoRef.current, {
       transform: `rotateX(${cord.x}deg) rotateY(${cord.y}deg)`,
-      duration: 1,
+      duration: 2,
       yoyoEase: true,
-      ease: 'power1.inOut'
+      // scale: -20,
+      ease: 'power1.inOut',
     })
   }, [cord.x, cord.y])
 

@@ -55,3 +55,7 @@ html,body{
 #shortInfo{
   transform: rotateY(40deg)
 }
+
+.txt-shadow-black{
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.7)
+}
