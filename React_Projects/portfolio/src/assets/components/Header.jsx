@@ -1,8 +1,21 @@
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import React from 'react'
 import 'remixicon/fonts/remixicon.css'
 // import '../../index.css'
 
 export const Header = () => {
+  useGSAP(()=>{
+    gsap.to('.hireMeBtn', {
+      scale:1.1,
+      repeat:-1,
+      // repeatDelay: 1,
+      duration:2.5,
+      yoyoEase:true,
+      ease: 'power.out'
+
+    })
+  })
   return (
     <div className='w-full absolute z-10 top-10 right-10 sm:right-2 lg:right-0 
     '>
@@ -15,9 +28,9 @@ export const Header = () => {
             p. .</h1>
         </div>
               {/* ----------- BUTTON --------- */}
-        <div className='flex items-center gap-5'>
+        <div className='flex items-center sticky gap-5 hireMeBtn'>
           <button className=' 
-          border-4 bg-black border-white px-3 py-3 sm:px-11 lg:py-3  
+          border-4 bg-black border-white px-8 py-3 sm:px-10 lg:py-2  
           rounded-full hover:bg-gray-500 cursor-pointer 
           shadow-[2px_2px_15px_5px_rgba(0,0,0,0.5)]
           '>Hire Me</button>
