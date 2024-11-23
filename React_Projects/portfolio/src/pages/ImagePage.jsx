@@ -11,7 +11,7 @@ export const ImagePage = () => {
   })
   const shortInfoRef = useRef();
   const mouseMove = (e)=>{
-    const xCord = (e.clientX-shortInfoRef.current.getBoundingClientRect().x-shortInfoRef.current.getBoundingClientRect().width/2)/20;
+    const xCord = (e.clientX-shortInfoRef.current.getBoundingClientRect().x-shortInfoRef.current.getBoundingClientRect().width/2)/70;
     const yCord = -(e.clientY-shortInfoRef.current.getBoundingClientRect().y-shortInfoRef.current.getBoundingClientRect().height/2)/20;
 
     setCord(prev=>({
