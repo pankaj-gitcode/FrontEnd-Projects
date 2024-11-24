@@ -40,7 +40,7 @@ export const ImagePage = () => {
     <div onMouseMove={(e)=>{
       mouseMove(e)
     }}
-    className='h-screen flex items-center justify-center p-5'>
+    className='h-[100vh] flex items-center justify-center p-5 bg-green-500'>
               {/* ----------------- IMAGE DIV --------- */}
       <div id='imgDiv' className=' h-full w-full relative bg-gradient-to-l from-white
        to-black rounded-[50px] shadow-[2px_2px_20px_8px_rgba(0,0,0,0.8)]

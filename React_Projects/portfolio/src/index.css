@@ -7,14 +7,16 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden */
 }
 
 html,body{
   background-color: #fff;
   color: #fff;
   /* color:rgb(117, 116, 116); */
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
 }
 
 @font-face{
