@@ -26,7 +26,7 @@ export const ImagePage = () => {
   useGSAP(()=>{
     gsap.to(shortInfoRef.current, {
       transform: `rotateX(${cord.x}deg) rotateY(${cord.y}deg)`,
-      duration: 2,
+      duration: 1,
       yoyoEase: true,
       // scale: -20,
       ease: 'power1.inOut',

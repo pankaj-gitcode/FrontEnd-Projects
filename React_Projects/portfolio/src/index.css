@@ -44,8 +44,8 @@ html,body{
   font-family: font6;
   src: url('./assets/fonts/font-6.woff2');
 }
-
-/* ----LOGO---- */
+/* ------------------ 1st Page ---------------- */
+              /* ----LOGO---- */
 .text-shdow{
   text-shadow: 2px 2px 30px rgba(255, 255, 255, 0.6)
 }
@@ -68,6 +68,10 @@ html,body{
   perspective: 3000px;
 }
 .txts{
-  
   transform-origin: 100% 90%;
+}
+
+.crsrCircle{
+  mix-blend-mode: difference;
+  transition: linear 5s ease-in-out
 }
