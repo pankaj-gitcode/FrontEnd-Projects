@@ -61,3 +61,13 @@ html,body{
 .txt-shadow-black{
   text-shadow: 2px 2px 20px rgba(0,0,0,0.7)
 }
+
+/* ------------ 2nd PAGE ------------- */
+.page2{
+  position: relative;
+  perspective: 3000px;
+}
+.txts{
+  
+  transform-origin: 100% 90%;
+}
