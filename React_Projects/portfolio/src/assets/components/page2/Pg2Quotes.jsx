@@ -17,7 +17,7 @@ export default function Pg2Quotes(){
               trigger: '#txt-div',
               start:'top 60%',
               end: 'bottom 500',
-              markers: true,  
+            //   markers: true,  
               scrub:2,
               duration:10,
               delay:1
@@ -38,17 +38,23 @@ export default function Pg2Quotes(){
 
         gsap.to(pgRef.current, {
             // transform: `rotateX(${cursorPos.x}deg) rotateY(${cursorPos.y}deg)`,
+            // x: cursorPos.x,
+            // y: cursorPos.y,
+            duration:2,
             yoyoEase: true,
+            ease: 'bounce.inOut',
+            
+
             
         })
     }
 
     return(<>
     <div  className='page2 relative bg-gray-100' onMouseMove={e=>moveCircle(e)}>
-        
+          {/* ------------ CUSTOM CURSOR ------------ */}
         <div ref={pgRef}   
         className="absolute h-20 w-20 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2
-        mix-blend-difference z-10 pointer-events-none"
+        mix-blend-difference z-10 pointer-events-none overflow-hidden"
         style={{
             left:`${cursorPos.x+60}px`,
             top: `${cursorPos.y+60}px`,
