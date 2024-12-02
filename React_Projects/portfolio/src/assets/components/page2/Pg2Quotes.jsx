@@ -26,8 +26,10 @@ export default function Pg2Quotes(){
     })
 
     const moveCircle = (e)=>{
-        const cordX = e.clientX;
-        const cordY = e.clientY;
+        const page2Rect = e.currentTarget.getBoundingClientRect(); // get the parent conatainer's bounding box
+        // cursor x & Y relative to the container
+        const cordX = e.clientX - page2Rect.left;
+        const cordY = e.clientY - page2Rect.top;
         setCursorPos(prev=>({
             ...prev, x:cordX, y:cordY
         }))
@@ -45,11 +47,11 @@ export default function Pg2Quotes(){
     <div  className='page2 relative bg-gray-100' onMouseMove={e=>moveCircle(e)}>
         
         <div ref={pgRef}   
-        className="absolute h-24 w-24 bg-white rounded-full transform translate-x-[1vh] translate-y-[2vh]
-        mix-blend-difference z-10 cursor-pointer "
+        className="absolute h-20 w-20 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2
+        mix-blend-difference z-10 pointer-events-none"
         style={{
-            left:`${cursorPos.x}px`,
-            top: `${cursorPos.y}px`,
+            left:`${cursorPos.x+60}px`,
+            top: `${cursorPos.y+60}px`,
             
         }} >
 
