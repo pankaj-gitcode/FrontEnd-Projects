@@ -46,9 +46,9 @@ export default function Pg3cards(){
             {/* --------- CARD-4 ---------- */}
             <div className='card sticky top-[10vh] h-[70vh] sm:h-[80vh] lg:h-[90vh] w-[70vw] sm:w-[50vw] lg:w-[30vw] rounded-3xl 
              shadow-[2px_2px_8px_6px_rgba(0,0,0,0.8)] bg-green-500 mb-20
-             bg-gradient-to-l from-yellow-400 via-orange-500 to-red-600 '></div>
+             bg -gradient-to-l from-yellow-400 via-orange-500 to-red-600 '></div>
 
-            {/* --------- CARD-5 ---------- */}
+            {/ * --------- CARD-5 ---------- */}
             <div className='card sticky top-[10vh] h-[70vh] sm:h-[80vh] lg:h-[90vh] w-[70vw] sm:w-[50vw] lg:w-[30vw] rounded-3xl 
              shadow-[2px_2px_8px_6px_rgba(0,0,0,0.8)] bg-blue-500 mb-20 
              bg-gradient-to-r from-purple-500 via-pink-500 to-red-500
