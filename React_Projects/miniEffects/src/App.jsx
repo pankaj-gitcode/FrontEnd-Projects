@@ -5,7 +5,8 @@ import './index.css'
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 
 const BoxAnim = lazy(()=>import('./components/BoxAnim'));
-const CustomCursor = lazy(()=>import('./components/CustomCursor'))
+const CustomCursor = lazy(()=>import('./components/CustomCursor'));
+const TextHoveringImg = lazy(()=>import('./components/TextHoveringImg'));
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Routes>
             <Route path='/customCursor' element={<CustomCursor/>}/>
             <Route path='/animBox' element={<BoxAnim/>}/>
+            <Route path='/txthoveringImgEffect' element={<TextHoveringImg/>} />
           </Routes>
         </BrowserRouter>
       </Suspense>
@@ -34,15 +36,24 @@ const RouterBtn = ()=>{
     <div>
       <div className='pl-20 flex flex-col items-center '>
 
-        {/* --------- CUSTOM CURSOR ---------- */}
-      <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
-      active:scale-105'
-      onClick={()=>customCursor('/customCursor')}>Click to navigate &quot;customCursor&quot;</button>
+          {/* --------- CUSTOM CURSOR ---------- */}
+        <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
+          active:scale-105'
+          onClick={()=>customCursor('/customCursor')}>Click to navigate &quot;customCursor&quot;
 
-        {/* --------- ANIMATE BOX ---------- */}
-      <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
-      active:scale-105'
-      onClick={()=>animBoxNav('/animBox')}>Click to navigate &quot;AnimBox&quot;</button>
+        </button>
+
+          {/* --------- ANIMATE BOX ---------- */}
+        <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
+          active:scale-105'
+          onClick={()=>animBoxNav('/animBox')}>Click to navigate &quot;AnimBox&quot;
+        </button>
+
+          {/* --------- HOVER ON TEXT APPEARS IMAGE ---------- */}
+        <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
+          active:scale-105'
+          onClick={()=>animBoxNav('/txthoveringImgEffect')}>Click to navigate &quot;TextImgHoveringEffect&quot;
+        </button>
       </div>
     </div>
   )
