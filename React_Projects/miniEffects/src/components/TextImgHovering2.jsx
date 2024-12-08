@@ -23,12 +23,7 @@ export default function TextImgHovering2() {
         divRef.current[i].childNodes[1].style.opacity = 1;
         divRef.current[i].childNodes[1].style.left = `${pos.x}px`;
     }
-    // -------- MOUSE-ENTER -----------
-    // const mouseEnter = ()=>{
-    //     divRef.current.forEach(ele=>{
-    //         ele.childNodes[1].style.opacity=1;
-    //     })
-    // }
+
     // -------- MOUSE-LEAVE -----------
     const mouseLeave = (i)=>{
         divRef.current[i].childNodes[1].style.opacity = 0;
@@ -52,13 +47,13 @@ export default function TextImgHovering2() {
                     >
                         {/* ------- TITLE -------- */}
                         <h1 
-                        className=''>{items.title}</h1>
+                        className='font-bold'>{items.title}</h1>
 
                         {/* ---------- IMAGE -------- */}
                         <img src={items.imgSrc} alt={items.imgAlt} 
-                            className='text-lg w-[20vw] 
+                            className='text-lg w-[38vw] h-[60vh]
                             drop-shadow-[2px_2px_8px_rgba(255,255,255,0.8)]
-                            opacity-0 absolute top-0 mix-blend-difference'
+                            opacity-0 absolute top-0 mix-blend-none z-50'
                         />
                     </div>
                 )
