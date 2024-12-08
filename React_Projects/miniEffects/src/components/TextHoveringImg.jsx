@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { textImgData } from '../assets/data/data';
 
 export default function TextHoveringImg() {
     const imgRef = useRef();
@@ -15,8 +16,9 @@ export default function TextHoveringImg() {
         // imgRef.current.childNodes[1].style.top = `${pos.y} px`;
     }
     // imgRef.current.forEach(elem=>console.log('elem: ', elem))
-    // console.log('imgRef=> ',imgRef.current.children)
+    console.log('imgRef=> ',imgRef.current.children)
 
+    // exit from each div
     const imgLeave = ()=>imgRef.current.childNodes[1].style.opacity=0;
 
   return ( <>
@@ -28,7 +30,7 @@ export default function TextHoveringImg() {
                 {/* ----------- DIV-1 ------------ */}
             <div ref={imgRef} onMouseMove={(e)=>divImg(e)} onMouseLeave={imgLeave} className='relative border-b-4 py-2 uppercase'>
                 <h1 className='text-7xl '>Kalari warriors</h1>
-                <img 
+                <img
                 src="https://image.lexica.art/full_webp/d2ce020e-1434-438e-8a00-c35e38e8c28f" 
                 alt="KALARI FIGHTERS" 
                 className='w-52 h-60 absolute top-0 opacity-0'    
@@ -75,6 +77,7 @@ export default function TextHoveringImg() {
                 className='w-52 h-60 absolute top-0'    
                 />
             </div>
+            
         </div>
 
 
