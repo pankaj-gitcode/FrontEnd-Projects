@@ -40,7 +40,7 @@ export default function TextImgHovering2() {
                                 
                     <div key={i}
                         ref={el=>divRef.current[i] = el}
-                        className='border-b-2 w-screen relative pt-6 pb-2'
+                        className='border-b-2 w-screen relative pt-6 pb-2 cursor-pointer'
                         onMouseMove={(e)=>mouseMove(e,i)}
                         
                         onMouseLeave={()=>mouseLeave(i)}
@@ -53,7 +53,8 @@ export default function TextImgHovering2() {
                         <img src={items.imgSrc} alt={items.imgAlt} 
                             className='text-lg w-[38vw] h-[60vh]
                             drop-shadow-[2px_2px_8px_rgba(255,255,255,0.8)]
-                            opacity-0 absolute top-0 mix-blend-none z-50'
+                            opacity-0 absolute top-0 mix-blend-none z-50
+                            rounded-[2vw]'
                         />
                     </div>
                 )

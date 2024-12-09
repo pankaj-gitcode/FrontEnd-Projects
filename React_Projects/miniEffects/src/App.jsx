@@ -8,6 +8,7 @@ const BoxAnim = lazy(()=>import('./components/BoxAnim'));
 const CustomCursor = lazy(()=>import('./components/CustomCursor'));
 const TextHoveringImg = lazy(()=>import('./components/TextHoveringImg'));
 const TextImgHovering2 = lazy(()=>import('./components/TextImgHovering2'));
+const Cursor = lazy(()=>import('./components/Cursor'));
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path='/animBox' element={<BoxAnim/>}/>
             <Route path='/txthoveringImgEffect' element={<TextHoveringImg/>} />
             <Route path='/txtimghovering2' element={<TextImgHovering2/>} />
+            <Route path='/cursor' element={<Cursor/>} />
           </Routes>
         </BrowserRouter>
       </Suspense>
@@ -34,6 +36,7 @@ export default function App() {
 const RouterBtn = ()=>{
   const animBoxNav = useNavigate();
   const customCursor = useNavigate();
+  const cursorNav = useNavigate();
   return(
     <div>
       <div className='pl-20 flex flex-col items-center '>
@@ -61,6 +64,12 @@ const RouterBtn = ()=>{
         <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
           active:scale-105'
           onClick={()=>animBoxNav('/txtimghovering2')}>Click to navigate &quot;TextImgHovering2&quot;
+        </button>
+
+          {/* --------- CURSOR ---------- */}
+        <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
+          active:scale-105'
+          onClick={()=>cursorNav('/cursor')}>Click to navigate &quot;custom-cursor&quot;
         </button>
       </div>
     </div>
