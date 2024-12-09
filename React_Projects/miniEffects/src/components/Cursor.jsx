@@ -1,3 +1,5 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import React, { useRef, useState } from 'react'
 
 export default function Cursor() {
@@ -16,6 +18,17 @@ export default function Cursor() {
         divRef.current.style.left = pos.x+'px';
         divRef.current.style.top = pos.y+ 'px';
     }
+
+    // Animate circle motion
+    useGSAP(()=>{
+        gsap.to(divRef.current, {
+            delay:2,
+            duration:10,
+            yoyoEase: true,
+            // ease: 'back.inOut',
+            
+        })
+    })
 
   return (
     <div>
