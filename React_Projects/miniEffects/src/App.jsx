@@ -9,6 +9,7 @@ const CustomCursor = lazy(()=>import('./components/CustomCursor'));
 const TextHoveringImg = lazy(()=>import('./components/TextHoveringImg'));
 const TextImgHovering2 = lazy(()=>import('./components/TextImgHovering2'));
 const Cursor = lazy(()=>import('./components/Cursor'));
+const TextAniFromDownToTop = lazy(()=>import('./components/TextAniFromDownToTop'));
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
             <Route path='/txthoveringImgEffect' element={<TextHoveringImg/>} />
             <Route path='/txtimghovering2' element={<TextImgHovering2/>} />
             <Route path='/cursor' element={<Cursor/>} />
+            <Route path='/txtAnimDownTop' element={<TextAniFromDownToTop/>} />
           </Routes>
         </BrowserRouter>
       </Suspense>
@@ -34,6 +36,7 @@ export default function App() {
 }
 
 const RouterBtn = ()=>{
+  const navigate = useNavigate();
   const animBoxNav = useNavigate();
   const customCursor = useNavigate();
   const cursorNav = useNavigate();
@@ -70,6 +73,12 @@ const RouterBtn = ()=>{
         <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
           active:scale-105'
           onClick={()=>cursorNav('/cursor')}>Click to navigate &quot;custom-cursor&quot;
+        </button>
+
+          {/* --------- ANIMATE TEXT FROM DOWN TO TOP ---------- */}
+        <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
+          active:scale-105'
+          onClick={()=>cursorNav('/txtAnimDownTop')}>Click to navigate &quot;TxtAnimationDownToTop&quot;
         </button>
       </div>
     </div>

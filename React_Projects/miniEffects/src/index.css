@@ -17,3 +17,8 @@ html,body{
   perspective:2000px;
   
 }
+
+/* ------- txtAnimFromDownTOTop ------- */
+.txt{
+  transform-origin: 100% 80%;
+}
