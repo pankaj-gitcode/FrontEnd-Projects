@@ -12,6 +12,7 @@ const Cursor = lazy(()=>import('./components/Cursor'));
 const TextAniFromDownToTop = lazy(()=>import('./components/TextAniFromDownToTop'));
 
 export default function App() {
+  
   return (
     <div>
       
@@ -34,7 +35,7 @@ export default function App() {
     </div>
   )
 }
-
+// ---- All in one by single click -----
 const RouterBtn = ()=>{
   const navigate = useNavigate();
   const animBoxNav = useNavigate();
