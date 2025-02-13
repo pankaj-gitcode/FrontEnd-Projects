@@ -10,6 +10,8 @@ const TextHoveringImg = lazy(()=>import('./components/TextHoveringImg'));
 const TextImgHovering2 = lazy(()=>import('./components/TextImgHovering2'));
 const Cursor = lazy(()=>import('./components/Cursor'));
 const TextAniFromDownToTop = lazy(()=>import('./components/TextAniFromDownToTop'));
+const BotSplime = lazy(()=>import('./components/BotSplime'));
+const Robot = lazy(()=>import('./components/Robot'));
 
 export default function App() {
   
@@ -28,6 +30,8 @@ export default function App() {
             <Route path='/txtimghovering2' element={<TextImgHovering2/>} />
             <Route path='/cursor' element={<Cursor/>} />
             <Route path='/txtAnimDownTop' element={<TextAniFromDownToTop/>} />
+            <Route path='/bot' element={<BotSplime />}/>
+            <Route path='/robot' element={<Robot/>} />
           </Routes>
         </BrowserRouter>
       </Suspense>
@@ -81,6 +85,18 @@ const RouterBtn = ()=>{
           active:scale-105'
           onClick={()=>cursorNav('/txtAnimDownTop')}>Click to navigate &quot;TxtAnimationDownToTop&quot;
         </button>
+
+          {/* --------- SPLIME BOT FACE MOVEMENT w.r.t. CURSOR ---------- */}
+        <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
+          active:scale-105'
+          onClick={()=>navigate('/bot')}> Click to navigate &quot;BotSplime&quot;
+        </button>
+          {/* --------- SPLIME BOT FACE MOVEMENT w.r.t. CURSOR ---------- */}
+        <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
+          active:scale-105'
+          onClick={()=>navigate('/robot')}>Click to navigate &quot;robot&quot;
+        </button>
+
       </div>
     </div>
   )
