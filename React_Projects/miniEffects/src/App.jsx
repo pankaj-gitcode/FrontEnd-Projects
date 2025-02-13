@@ -70,7 +70,7 @@ const RouterBtn = ()=>{
           onClick={()=>animBoxNav('/txtimghovering2')}>Click to navigate &quot;TextImgHovering2&quot;
         </button>
 
-          {/* --------- CURSOR ---------- */}
+          {/* --------- CURSOR-NAVIGATION ---------- */}
         <button className='cursor-pointer border mb-5 p-2 bg-gray-500 bg-gradient-to-t from-gray-600 to-gray-300
           active:scale-105'
           onClick={()=>cursorNav('/cursor')}>Click to navigate &quot;custom-cursor&quot;
