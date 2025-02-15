@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
-import Page1Bottom from '../assets/components/Page1Bottom'
-import ShortInfo from '../assets/components/ShortInfo'
+
+import Page1Bottom from '../components/Page1Bottom'
+import ShortInfo from '../components/ShortInfo'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 

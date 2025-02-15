@@ -28,7 +28,7 @@ export default function Pg2Quotes(){
     const moveCircle = (e)=>{
         const page2Rect = e.currentTarget.getBoundingClientRect(); // get the parent conatainer's bounding box
         // cursor x & Y relative to the container
-        const cordX = e.clientX - page2Rect.left;
+        const cordX = e.clientX - page2Rect.left; // to keep the circle inside this specific div
         const cordY = e.clientY - page2Rect.top;
         setCursorPos(prev=>({
             ...prev, x:cordX, y:cordY
@@ -43,9 +43,7 @@ export default function Pg2Quotes(){
             duration:2,
             yoyoEase: true,
             ease: 'bounce.inOut',
-            
-
-            
+       
         })
     }
 
