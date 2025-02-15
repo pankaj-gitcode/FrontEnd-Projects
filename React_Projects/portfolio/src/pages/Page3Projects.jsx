@@ -15,20 +15,28 @@ export const Page3Projects = () => {
         {/* ----- PROJECT SECTION ----- */}
         {
             projectAssets.map((el,i)=>
-            <div key={el.projectId} className='bg-blue-500'>
+            <div key={el.projectId} className='bg-[#E3E3E3] text-black font-[font5]
+            absolute w-full h-full top-[80%]'>
+
+                     {/* ----- PROJECT-CONTAINER ----- */}
                 {
                     <div className={`flex items-center justify-between 
-                    ${el.projectId % 2 === 0? 'flex-row-reverse': '' }`}>
-                        <div>
-                            <h1>{el.projectTitle}</h1>
-                        </div>
+                        ${el.projectId % 2 === 0? 'flex-row-reverse': '' }`}>
+                                {/* ----- PROJECT-TITLE ----- */}
+                            <div className='text-[20vw] sm:text-[10vw]'>
+                                <h1>{el.projectTitle}</h1>
+                            </div>
 
-                        <div className='flex flex-col'>
-                            <a href="">{el.gitHubLink}</a>
-                            <a href="">{el.webLink}</a>
-                        </div>
+                                {/* ----- PROJECT-LINKS ----- */}
+                            <div className='flex flex-col'>
+                                
+                                <a href={el.gitHubLink} target='_blank'>Git-Link</a>
+                                <a href={el.webLink}>Web-Link</a>
+                            </div>
+                    
                     </div>
                 }
+                <hr className='bg-black h-1'/>
             </div>
             )
         }
