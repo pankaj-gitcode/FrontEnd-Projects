@@ -8,7 +8,7 @@ export const Page3Projects = () => {
     console.log('Project Title: ', projectAssets);
   return (<>
 
-  <div className='relative w-full h-full'>
+  <div className='relative w-full h-full '>
 
         {/* ----- ROBOT SECTION ----- */}
         <div>
@@ -24,17 +24,18 @@ export const Page3Projects = () => {
 
                      {/* ----- PROJECT-CONTAINER ----- */}
                 {
-                    <div className={`flex items-center justify-between 
-                        ${el.projectId % 2 === 0? 'flex-row-reverse': '' }`}>
+                    <div className={`flex flex-col sm:flex-row items-center justify-between p-5
+                        ${el.projectId % 2 === 0? 'sm:flex-row-reverse': '' }`}>
                                 {/* ----- PROJECT-TITLE ----- */}
-                            <div className='text-[20vw] sm:text-[10vw]'>
+                            <div className='text-[15vw] sm:text-[10vw]'>
                                 <h1>{el.projectTitle}</h1>
                             </div>
 
                                 {/* ----- PROJECT-LINKS ----- */}
-                            <div className='flex flex-col'>
+                            <div className='flex flex-row sm:flex-col items-between justify-between w-[60vw] 
+                                sm:w-fit text-[3vw] sm:text-[2vw] md:text-[2vw] font-[font2] font-bold bg-yellow-500'>
                                 
-                                <a href={el.gitHubLink} target='_blank'>Git-Link</a>
+                                <a href={el.gitHubLink} target='_blank' className='pb-8 sm:pb-6 '>Git-Link</a>
                                 <a href={el.webLink}>Web-Link</a>
                             </div>
                     
