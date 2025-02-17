@@ -2,6 +2,8 @@ import Spline from '@splinetool/react-spline'
 import React, { useRef, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import { projectAtom} from '../atom/Atom'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap/all'
 
 
 export const Page3Projects = () => {
@@ -21,9 +23,18 @@ export const Page3Projects = () => {
         imgRef.current[i].childNodes[0].style.opacity = 1;
         imgRef.current[i].childNodes[0].style.left = `${cord.x + 2}px`
 
-        
-
     }
+    // useGSAP(()=>{
+    //     gsap.fromTo('.animateImg',{
+    //         y: 20,
+    //         opacity: 0
+    //     }, {
+    //         y:0,
+    //         opacity:1,
+    //         duration:2,
+    //         yoyoEase:true
+    //     })
+    // }, [])
 
     const mouseLeave = (i)=>{
         imgRef.current[i].childNodes[0].style.opacity=0;
@@ -55,7 +66,8 @@ export const Page3Projects = () => {
 
                                     {/* ----- IMAGES ----- */}
                             <img src={el.image} alt={el.image} className='animateImg h-[60vh] rounded-2xl 
-                        shadow-[2px_2px_20px_12px_rgba(0,0,0,0.5)] -skew-y-6 absolute top-0 opacity-0 mix-blend-luminosity ' />
+                        shadow-[2px_2px_20px_12px_rgba(0,0,0,0.5)] -skew-y-6 absolute top-0 opacity-0 
+                        mix-blend-luminosity transition duration-700 ease-in-out' />
 
                                 {/* ----- PROJECT-TITLE ----- */}
                             <div className='text-[15vw] sm:text-[10vw]'>
