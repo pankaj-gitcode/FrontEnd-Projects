@@ -2,6 +2,10 @@ import Spline from '@splinetool/react-spline'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 import { projectAtom} from '../atom/Atom'
+import { profileImg } from '../assets/asset'
+
+
+
 
 export const Page3Projects = () => {
     const projectAssets = useRecoilValue(projectAtom);
@@ -10,11 +14,11 @@ export const Page3Projects = () => {
 
   <div className='relative w-full h-full '>
 
+        <img src={profileImg.img1} alt="thumbnail" className='h-[50vh] w-[vw]'/>
         {/* ----- ROBOT SECTION ----- */}
         <div>
             <Spline scene="https://prod.spline.design/6ergQDvH14-iwc63/scene.splinecode" />
         </div>
-
         {/* ----- PROJECT SECTION ----- */}
         <div className='absolute w-full top-[60%] sm:top-[80%]'>
         {
@@ -33,7 +37,7 @@ export const Page3Projects = () => {
 
                                 {/* ----- PROJECT-LINKS ----- */}
                             <div className='flex flex-row sm:flex-col items-between justify-between w-[60vw] 
-                                sm:w-fit text-[3vw] sm:text-[2vw] md:text-[2vw] font-[font2] font-bold bg-yellow-500'>
+                                sm:w-fit text-[3vw] sm:text-[2vw] md:text-[2vw] font-[font2] font-bold'>
                                 
                                 <a href={el.gitHubLink} target='_blank' className='pb-8 sm:pb-6 '>Git-Link</a>
                                 <a href={el.webLink}>Web-Link</a>
