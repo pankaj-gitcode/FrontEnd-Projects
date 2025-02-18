@@ -8,7 +8,7 @@ import gsap from 'gsap/all'
 
 export const Page3Projects = () => {
     const projectAssets = useRecoilValue(projectAtom);
-    console.log('Project Title: ', projectAssets);
+    // console.log('Project Title: ', projectAssets);
 
     const imgRef = useRef([]);
     const [cord, setCord] = useState({x:0, y:0});
@@ -62,12 +62,14 @@ export const Page3Projects = () => {
                     <div onMouseMove={(e)=>mouseMove(e,i)} onMouseLeave={()=>mouseLeave(i)}
                         ref={el=>imgRef.current[i] = el}
                         className={`relative flex flex-col sm:flex-row items-center justify-between p-5
+                        min-w-[80%]  overflow-hidden
                         ${el.projectId % 2 === 0? 'sm:flex-row-reverse': '' }`}>
 
                                     {/* ----- IMAGES ----- */}
-                            <img src={el.image} alt={el.image} className='animateImg h-[60vh] rounded-2xl 
+                            <img src={el.image} alt={el.image} className='animateImg rounded-2xl 
                         shadow-[2px_2px_20px_12px_rgba(0,0,0,0.5)] -skew-y-6 absolute top-0 opacity-0 
-                        mix-blend-luminosity transition duration-700 ease-in-out' />
+                        mix-blend-luminosity transition duration-700 ease-in-out overflow-x-hidden
+                        md:h-[40vh] h-[20vh] right-10'/>
 
                                 {/* ----- PROJECT-TITLE ----- */}
                             <div className='text-[15vw] sm:text-[10vw]'>

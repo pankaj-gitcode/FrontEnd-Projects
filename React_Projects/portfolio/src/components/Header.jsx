@@ -17,7 +17,7 @@ export const Header = () => {
     })
   })
   return (
-    <div className='w-full absolute z-10 top-10 right-10 sm:right-2 lg:right-0 
+    <div className='w-full absolute z-10 top-10 right-10 right-0 
     '>
       <div className='w-[92vw] ml-10 flex items-center justify-between'>
 
@@ -37,6 +37,7 @@ export const Header = () => {
           {/* <i className="ri-grid-fill text-4xl cursor-pointer hidden md:block  w-fit "></i> */}
 
         </div>
+
       </div>
     </div>
   )
