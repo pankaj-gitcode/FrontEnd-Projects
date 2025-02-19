@@ -1,5 +1,13 @@
 import { atom } from "recoil";
 import { profileImg } from "../assets/asset";
+import axios from "axios";
+
+
+// ----- SPLINE -----
+export const splineAtom = atom({
+    key: 'splineAtom',
+    default: {URL: 'https://prod.spline.design/6ergQDvH14-iwc63/scene.splinecode'}
+})
 
 export const projectAtom = atom({
     key: 'projectTitleAtom',
@@ -40,4 +48,10 @@ export const projectAtom = atom({
             image: profileImg.img1
         }
     ]
+})
+
+//------ VIDEO -----
+export const videoAtom = atom({
+    key: 'videoAtom',
+    default: profileImg.contact_robot
 })
