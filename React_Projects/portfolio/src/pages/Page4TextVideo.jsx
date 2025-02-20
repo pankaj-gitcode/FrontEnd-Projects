@@ -20,34 +20,44 @@ export const Page4TextVideo = ()=>{
       opacity:1,
       scrollTrigger: {
         trigger: '.text-div',
-        markers:true,
+        // markers:true,
         start: 'top 50%',
         end: 'bottom 20%',
-        duration: 2,
-        scrub:1,
-        delay:1
+        duration: 10,
+        scrub:2,
+        
       }
     })
   
 
 
   return(<>
+    {/* ----- CONTAINER ----- */}
     <div className='relative'>
 
+        {/* ----- VIDEO TEXTS ----- */}
       <div className='bg-gray-500'>
         <video autoPlay controls={false} loop muted={true} preload='metadata' playsInline>
           <source src={video} type='video/mp4' className='object-cover'/>
         </video>
       </div>
 
+      {/* ----- TEXTS ----- */}
       <div className='text-div absolute top-3 bottom-1 w-full h-full
-      flex flex-col items-center justify-center font-[Font5] uppercase
-       rounded-3xl  leading-[1] bg-blend-difference'
-       ref={textRef}
-       >
-
+        flex flex-col items-center justify-center font-[Font5] uppercase
+        rounded-3xl  leading-[1] crsrCircle'
+        ref={textRef}>
         <h1 className=' txts text-[10vh] sm:text-[20vh] md:text-[15vh] lg:text-[20vw]'>Lets</h1>
         <h1 className=' txts text-[10vh] sm:text-[20vh] md:text-[15vh] lg:text-[20vw]'>Connect</h1>
+      </div>
+
+      {/* ----- BUTTON ----- */}
+      <div className='absolute right-10 bottom-5 text-white'>
+        <button className='uppercase border-4 rounded-full px-7 py-3
+        shadow-[2px_2px_19px_2px_rgba(255,255,255,0.5)] bg-transparent
+        active:scale-105 transition-300 ease-in-out'>
+        click Here
+        </button>
       </div>
 
 
