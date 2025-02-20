@@ -1,14 +1,17 @@
-import React, { useRef } from 'react'
-import { useRecoilValue } from 'recoil'
-import { videoAtom } from '../atom/Atom'
+import React, { useEffect, useRef, useState } from 'react'
+import { useRecoilState, useRecoilValue } from 'recoil'
+import { exitAtom, videoAtom } from '../atom/Atom'
 import { useGSAP } from '@gsap/react';
 import gsap, { ScrollTrigger } from 'gsap/all';
+import {  useNavigate } from 'react-router-dom';
+import { ContactForm } from './ContactForm';
 
 
 export const Page4TextVideo = ()=>{
   const video = useRecoilValue(videoAtom);
   const textRef = useRef();
-
+  const navigate =  useNavigate();
+  
   // console.log("textRef: ", textRef.current.childNodes)
   gsap.registerPlugin(ScrollTrigger)
   
@@ -29,16 +32,16 @@ export const Page4TextVideo = ()=>{
       }
     })
   
-
+    
 
   return(<>
     {/* ----- CONTAINER ----- */}
-    <div className='relative'>
+    <div className='relative shadow-[inset_2px_20x_19px_2px_rgba(255,255,255,0.5)] '>
 
         {/* ----- VIDEO TEXTS ----- */}
-      <div className='bg-gray-500'>
+      <div className='bg-gray-500 '>
         <video autoPlay controls={false} loop muted={true} preload='metadata' playsInline>
-          <source src={video} type='video/mp4' className='object-cover'/>
+          <source src={video} type='video/mp4' className='object-cover '/>
         </video>
       </div>
 
@@ -52,15 +55,21 @@ export const Page4TextVideo = ()=>{
       </div>
 
       {/* ----- BUTTON ----- */}
-      <div className='absolute right-10 bottom-5 text-white'>
-        <button className='uppercase border-4 rounded-full px-7 py-3
-        shadow-[2px_2px_19px_2px_rgba(255,255,255,0.5)] bg-transparent
-        active:scale-105 transition-300 ease-in-out'>
-        click Here
+      {/* <div 
+      className=' rounded-full absolute right-10 bottom-5 text-white'>
+        
+        <button
+          className='uppercase border-4 rounded-full px-7 py-3
+          shadow-[2px_2px_19px_2px_rgba(255,255,255,0.5)] 
+          active:scale-105 transition-300 ease-in-out'>
+        Click Here     
         </button>
+      </div> */}
+
+      <div className='absolute w-full h-full'>
+        <ContactForm/>
       </div>
-
-
+        
     </div>
   </>)
 }

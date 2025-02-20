@@ -55,3 +55,9 @@ export const videoAtom = atom({
     key: 'videoAtom',
     default: profileImg.contact_robot
 })
+
+// ------ EXIT -----
+export const exitAtom = atom({
+    key: 'exitAtom',
+    default: false
+})

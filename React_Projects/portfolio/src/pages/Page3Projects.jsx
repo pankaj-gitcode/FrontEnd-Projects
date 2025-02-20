@@ -95,7 +95,10 @@ export const Page3Projects = () => {
                 </div>
                 )
             }
+                <div className=''>
+
                 <Page4TextVideo/>
+                </div>
             </div>
         </div> 
     
