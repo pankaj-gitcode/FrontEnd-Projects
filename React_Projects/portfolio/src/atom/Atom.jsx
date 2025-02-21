@@ -61,3 +61,9 @@ export const exitAtom = atom({
     key: 'exitAtom',
     default: false
 })
+
+// ----- ENV -----
+export const envAtom =atom({
+    key: 'envAtom',
+    defaut: import.meta.env.Access_KEY
+}) 
